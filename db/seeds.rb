@@ -14,7 +14,6 @@ User.destroy_all
 puts 'Creating 10 fake user...'
 5.times do
   user = User.new(
-    username: Faker::Internet.username,
     email: Faker::Internet.email,
     password: 'password',
   )
@@ -26,18 +25,17 @@ puts 'Creating 10 fake user...'
     description: Faker::Food.description,
     ingredients: Faker::Food.ingredient,
     difficulty: Faker::Number.between(from: 1, to: 5),
-    Prep_time: 10.minutes,
+    prep_time: Time.now,
     user: user,
     )
     # seedpackage.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
-    seedpackage.save!
+    alternative.save!
   end
 
 end
 
-10.times do
+5.times do
   user = User.new(
-    username: Faker::Internet.username,
     email: Faker::Internet.email,
     password: 'password',
   )
@@ -47,4 +45,4 @@ end
 puts 'Finished!'
 
 puts "user created : #{User.count} "
-puts "seedpackage created : #{Seedpackage.count} "
+puts "Alternatives created : #{Alternative.count} "
