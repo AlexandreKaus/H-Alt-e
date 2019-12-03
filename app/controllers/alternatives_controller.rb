@@ -1,5 +1,5 @@
 class AlternativesController < ApplicationController
-  before_action :set_params, only: %i[show, edit]
+  before_action :set_alternatives, only: %i[show edit update]
 
   def index
     @alternatives = Alternative.all
@@ -26,7 +26,6 @@ class AlternativesController < ApplicationController
   end
 
   def update
-    @alternative = Alternative.find(params[:id])
     @alternative.update(alternative_params)
   end
 
