@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-sm-8 col-md-6">
+    <div class="form-container">
+      <% if alternative.new_record? %>
+        <h1>Create a new alternative</h1>
+      <% else %>
+        <h1> Update your alternative </h1>
+      <% end %>
+      <div class="form">
+        <%= simple_form_for alternative do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :ingredients %>
+        <%= f.input :difficulty %>
+        <%= f.input :prep_time %>
+        <%= f.button :submit, class: 'btn btn-primary2' %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
