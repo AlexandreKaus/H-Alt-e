@@ -9,6 +9,7 @@ require 'faker'
 
 puts 'Clean database...'
 
+# Alternative.destroy_all
 User.destroy_all
 
 puts 'Creating 10 fake user...'
@@ -26,11 +27,15 @@ puts 'Creating 10 fake user...'
     ingredients: Faker::Food.ingredient,
     difficulty: Faker::Number.between(from: 1, to: 5),
     prep_time: Time.now,
-    # photos: []
     user: user,
     )
-    # seedpackage.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
     alternative.save!
+  end
+
+  3.times do
+    photo = Photo.new(
+      )
+    photo.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
   end
 
 end
