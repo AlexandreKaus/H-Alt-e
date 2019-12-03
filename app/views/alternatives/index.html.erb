@@ -1,0 +1,12 @@
+        <% @alternatives.each do |alternative| %>
+        <% if alternative.status == "Disponible" %>
+            <%= cl_image_tag alternative.photo, crop: :fill, class: "left-img" %>
+              <h2> <%= link_to alternative.name, alternative_path(alternative) %> </h2>
+              <div> <%= alternative.description %> </div>
+              <img src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+                <div> <%= alternative.user.username %> </div>
+                <div class="user-infos-text-2"> <%= alternative.package_price %> €
+                <%= link_to '', alternative_transactions_path(alternative), method: :post, class: 'fa fa-shopping-cart'%></div>
+        <% end %>
+        <% end %>
+
