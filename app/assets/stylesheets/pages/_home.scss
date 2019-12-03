@@ -1,4 +1,29 @@
 // Specific CSS for your home-page
 .container {
-  margin: 0, 40px, 0, 40px;
+  margin: 40px, 40px, 0, 40px;
+}
+.quote {
+  text-align: center;
+}
+h1 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 28px;
+}
+p {
+  font-family: "Frank Ruhl Libre", "Georgia", "serif";
+}
+.daily-alt {
+  width: 480px;
+  display: flex;
+}
+.daily-alt img {
+  width: 432px;
+  height: 324px;
+}
+.author {
+  text-align: right;
+  font-size: 24px;
+  font-family: "Frank Ruhl Libre", "Georgia", "serif";
 }
