@@ -4,6 +4,6 @@ class AlternativesController < ApplicationController
   end
 
   def show
-    @alternative - Alternative.find(params[:id])
+    @alternative = Alternative.find(params[:id])
   end
 end
