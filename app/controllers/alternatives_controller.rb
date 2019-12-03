@@ -27,6 +27,11 @@ class AlternativesController < ApplicationController
 
   def update
     @alternative.update(alternative_params)
+    if @alternative.save
+      redirect_to alternative_path(@alternative)
+    else
+      render 'edit'
+    end
   end
 
   private
