@@ -1,10 +1,11 @@
 <% @alternatives.each do |alternative| %>
 
-<h1> <%= link_to alternative.title, alternative_path(alternative) %> </h1>
-<h2> <%= alternative.description %> </h2>
-<h2> <%= alternative.ingredients %> </h2>
-<h2> <%= alternative.difficulty %> </h2>
-<h2> <%= alternative.prep_time %> </h2>
+<p> <%= link_to alternative.title, alternative_path(alternative) %> </p>
+<p> <%= alternative.description %> </p>
+<p> <%= alternative.ingredients %> </p>
+<p> <%= alternative.difficulty %> </p>
+<p> <%= alternative.prep_time %> </p>
+
 
 <% end %>
 
