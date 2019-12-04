@@ -5,11 +5,9 @@
 <p> <%= alternative.ingredients %> </p>
 <p> <%= alternative.difficulty %> </p>
 <p> <%= alternative.prep_time %> </p>
-<% alternative.photo.each do |pic| %>
-<p><%= cl_image_tag pic.photo %></p>
+<% alternative.photos.each do |pic| %>
+  <%= cl_image_tag pic.photo %>
 <% end %>
 
 
 <% end %>
-
-
