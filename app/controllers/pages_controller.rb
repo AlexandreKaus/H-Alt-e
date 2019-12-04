@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    raise
 
 
   #   alternatives = Alternative.all
