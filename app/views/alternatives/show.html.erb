@@ -5,10 +5,9 @@
       <div class="group-item">
         <div class="left-infos">
           <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
-<%= link_to 'Upvote', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
-<%= link_to 'Downvote', alternative_downvote_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
-<!-- route :  /alternatives/:alternative_id/upvotes/:id(.:format -->
-<h1><%= @upvote_count - @downvote %></h1>
+          <%= link_to 'Upvote', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
+          <%= link_to 'Downvote', alternative_downvote_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
+          <h1><%= @upvote_count - @downvote %></h1>
         </div>
         <div class="ingredients">
           <p><%= @alternative.difficulty %></p>
@@ -29,7 +28,7 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <span class="badge badge-primary badge-pill">
           <%= review.comment %>
-          <%= review.created_at.humanized %>
+          <%= review.created_at %>
         </li>
       <% end %>
     </ul>
@@ -49,4 +48,4 @@
  </div>
  <div class="white-line"></div>
 </div>
-<%= render "reviews/new", cocktail: @cocktail, review: @review %>
+<%= render "reviews/new", alternative: @alternative, review: @review %>
