@@ -17,4 +17,7 @@
   </div>
 </div>
 <div class="white-line"></div>
+<% alternative.photos.each do |pic| %>
+  <%= cl_image_tag pic.photo %>
+<% end %>
 <% end %>

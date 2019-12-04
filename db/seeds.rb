@@ -9,8 +9,8 @@ require 'faker'
 
 puts 'Clean database...'
 
-# Alternative.destroy_all
 User.destroy_all
+
 
 puts 'Creating 10 fake user...'
 5.times do
@@ -30,14 +30,15 @@ puts 'Creating 10 fake user...'
     user: user,
     )
     alternative.save!
-  end
 
-  3.times do
-    photo = Photo.new(
-      )
-    photo.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
+    3.times do
+      photo = Photo.new(
+        alternative: alternative
+        )
+      photo.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
+      photo.save!
+    end
   end
-
 end
 
 5.times do
