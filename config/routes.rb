@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :alternatives, only: [:index, :show, :new, :create, :edit, :update] do
+    resources :reviews, only: [:create]
     resources :upvotes, only: :create
     post '/downvote', to: 'upvotes#custom', as: :downvote
   end
