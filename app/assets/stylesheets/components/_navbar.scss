@@ -8,17 +8,18 @@
 }
 
 .navbar-lewagon .navbar-brand h2 {
+  margin-top: 10px;
   color: $white;
   font-family: "Noto Sans", "Helvetica", "sans-serif";
-  font-size: 48px;
+  font-size: 22px;
 }
 
 .navbar-light .navbar-nav .nav-link {
+  margin-top: 10px;
   color: $white;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 a {
   color: $white !important;
 }
-
