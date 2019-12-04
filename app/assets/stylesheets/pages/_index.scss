@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+
 
 .card-alternatives-container {
   display: flex;
@@ -29,4 +31,3 @@ p {
   border-right: 1px solid;
   height: 20px;
 }
-
