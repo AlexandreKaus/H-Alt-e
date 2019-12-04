@@ -49,6 +49,6 @@ class AlternativesController < ApplicationController
   end
 
   def alternative_params
-    params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time)
+    params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, :tag_list)
   end
 end

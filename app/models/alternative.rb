@@ -9,4 +9,5 @@ class Alternative < ApplicationRecord
   validates :ingredients, presence: true
   validates :difficulty, presence: true
   validates :prep_time, presence: true
+  # acts_as_taggable
 end
