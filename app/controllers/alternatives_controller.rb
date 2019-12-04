@@ -1,5 +1,5 @@
 class AlternativesController < ApplicationController
-  before_action :set_alternatives, only: %i[show edit update]
+  before_action :set_alternatives, only: %i[show destroy edit update]
 
   def index
     @alternatives = Alternative.all
@@ -35,6 +35,11 @@ class AlternativesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @alternative.destroy
+    redirect_to alternative_path(@alternative)
   end
 
   private

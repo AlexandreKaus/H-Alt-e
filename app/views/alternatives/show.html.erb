@@ -1,8 +1,25 @@
+<div class="container">
+  <div class="about-container">
+    <h1> <%= @alternative.title %> </h1>
+    <div class="item-infos d-flex">
+      <div class="group-item">
+        <div class="left-infos">
+          <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
 <%= link_to 'Upvote', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
 <%= link_to 'Downvote', alternative_downvote_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
 <!-- route :  /alternatives/:alternative_id/upvotes/:id(.:format -->
 <h1><%= @upvote_count - @downvote %></h1>
-
+        </div>
+        <div class="ingredients">
+          <p><%= @alternative.difficulty %></p>
+          <p><%= @alternative.ingredients %></p>
+        </div>
+      </div>
+      <div class="description-right">
+        <p>About</p>
+        <p><%= @alternative.description %></p>
+      </div>
+    </div>
 <h3>Reviews</h3>
   <% if @alternative.reviews.empty? %>
     <p>Be the first to let a review</p>
@@ -16,6 +33,20 @@
         </li>
       <% end %>
     </ul>
-  <% end %>
-
+  <% end %>  </div>
+  <div class="white-line"></div>
+  <div class="stepcard">
+    <p>1st Step</p>
+    <div class="desc-step d-flex">
+      <img src="https://s3-us-west-2.amazonaws.com/lia-griffith-media/wp-content/uploads/2014/03/LipBalmIngredients.jpg" alt="1step-img">
+      <p>In a small dish mix together the coconut oil, beeswax pellets, and almond oil.</p>
+      <!-- AJOUTER STEP ICI A LA PLACE DU TEXT TEST-->
+    </div>
+  </div>
+  <div class="white-line"></div>
+ <div class="reviews-card">
+   <p>Reviews</p>
+ </div>
+ <div class="white-line"></div>
+</div>
 <%= render "reviews/new", cocktail: @cocktail, review: @review %>

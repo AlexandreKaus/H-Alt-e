@@ -5,6 +5,10 @@
 .quote {
   text-align: center;
 }
+.title {
+  font-family: "Frank Ruhl Libre", "Georgia", "serif";
+  font-size: 38px;
+}
 h1 {
   font-size: 48px;
 }
@@ -15,15 +19,26 @@ p {
   font-family: "Frank Ruhl Libre", "Georgia", "serif";
 }
 .daily-alt {
-  width: 480px;
+  width: 850px;
+  margin-top: 40px;
+}
+.description {
+  margin-left: 20px;
+}
+.daily-alt-container {
   display: flex;
 }
 .daily-alt img {
-  width: 432px;
-  height: 324px;
+  width: 340px;
+  height: 255px;
 }
 .author {
   text-align: right;
   font-size: 24px;
   font-family: "Frank Ruhl Libre", "Georgia", "serif";
+}
+::selection {
+    color: $dark-green;
+    text-shadow: none;
+    background: #fff;
 }

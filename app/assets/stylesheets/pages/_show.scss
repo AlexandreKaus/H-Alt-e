@@ -1,0 +1,23 @@
+.item-infos {
+  justify-content: space-between;
+}
+
+.left-infos img {
+  height: 255px;
+  width: 340px;
+  object-fit: cover;
+}
+
+.description-right {
+  width: 350px;
+  text-align: center;
+}
+
+.group-item {
+  display: flex;
+  justify-content: align-items;
+}
+
+.ingredients {
+  margin-left: 40px;
+}

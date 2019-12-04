@@ -1,13 +1,23 @@
 <% @alternatives.each do |alternative| %>
 
-<p> <%= link_to alternative.title, alternative_path(alternative) %> </p>
+<div class="container">
+  <div class="card-alternatives-container">
+      <div class="index-img">
+      </div>
+      <div class="card-alternatives-left">
+<h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
+<div class="property"> <%= alternative.difficulty %> </div>
 <p> <%= alternative.description %> </p>
-<p> <%= alternative.ingredients %> </p>
-<p> <%= alternative.difficulty %> </p>
-<p> <%= alternative.prep_time %> </p>
+    </div>
+      <div class="separator"></div>
+    <div class="card-alternatives-right">
+    <div class="property">D.I.Y. </div>
+<p> <i class="far fa-clock"></i><%= alternative.prep_time %> min.</p>
+    </div>
+  </div>
+</div>
+<div class="white-line"></div>
 <% alternative.photos.each do |pic| %>
   <%= cl_image_tag pic.photo %>
 <% end %>
-
-
 <% end %>
