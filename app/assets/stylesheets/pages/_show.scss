@@ -21,3 +21,24 @@
 .ingredients {
   margin-left: 40px;
 }
+
+.about-container h1 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.diff-time {
+  justify-content: space-between;
+}
+
+.upvotes {
+  margin-top: 10px;
+}
+
+.form-review {
+  width: 80%;
+}
+
+#new_review > div > label {
+  opacity: 0;
+}
