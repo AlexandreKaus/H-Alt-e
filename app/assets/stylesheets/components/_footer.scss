@@ -1,0 +1,32 @@
+.footer {
+background-color: white;
+color: $dark-green;
+height: 40px;
+position: sticky;
+bottom: 0;
+width:100%;
+z-index: -1000;
+}
+
+.right-foot p {
+
+  font-size: 16px !important;
+
+}
+
+.right-foot {
+  width : 40%;
+}
+
+.get-touch {
+  margin-left: 80px;
+  font-style: bold;
+  font-size: 16px !important;
+}
+
+.top-foot {
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-top: 30px;
+  opacity: 70%;
+}
