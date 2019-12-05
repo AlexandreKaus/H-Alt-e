@@ -35,9 +35,11 @@
     </ul>
   </div>
         <%= f.input :prep_time %>
+        <%= f.input :alimentation_list, label: "Alimentation",  collection: $list_of_tags, as: :check_boxes %>
         <%= f.button :submit, class: 'btn btn-primary2' %>
       <% end %>
       </div>
     </div>
   </div>
 </div>
+

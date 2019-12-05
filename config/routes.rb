@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :alternatives do
     resources :reviews, only: :create
     resources :upvotes, only: :create
+    resources :photos, only: [:new, :create]
     post '/downvote', to: 'upvotes#custom', as: :downvote
   end
+  get '/alternatives/new/step', to: 'alternatives#step', as: :alternative_step
 end
