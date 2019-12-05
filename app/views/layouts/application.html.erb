@@ -10,22 +10,25 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="green">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
-<svg class="defs-only">
-  <filter id="monochrome" color-interpolation-filters="sRGB"
-          x="0" y="0" height="100%" width="100%">
+  <svg class="defs-only">
+    <filter id="monochrome" color-interpolation-filters="sRGB"
+    x="0" y="0" height="100%" width="100%">
     <feColorMatrix type="matrix"
-      values="1 0 0 0 0
-              1 0 0 0 0
-              1 0 0 0 0
-              1 0 0 0 0" />
-  </filter>
-</svg>
+    values="1 0 0 0 0
+    1 0 0 0 0
+    1 0 0 0 0
+    1 0 0 0 0" />
+    </filter>
+  </svg>
 </html>
