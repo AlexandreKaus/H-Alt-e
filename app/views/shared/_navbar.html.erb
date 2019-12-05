@@ -9,11 +9,12 @@
   </button>
     <div class="searchbar">
     <%= form_tag alternatives_path, class: "barbar", method: :get do %>
+        </div>
        <%= submit_tag "Search", class: "btn btn-primary" %>
-        <%= text_field_tag :query,
+        <div class="searchbar"> <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a Alt!"
+          placeholder: "Find an alternative"
         %>
     <% end %>
   </div>
