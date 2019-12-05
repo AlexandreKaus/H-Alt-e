@@ -3,7 +3,7 @@
 <div class="container">
   <div class="card-alternatives-container">
       <div class="index-img">
-         <%= cl_image_tag alternative.photos.first.photo %>
+         <%= cl_image_tag alternative.photos.first.try(:photo) || "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575542682/diy-img.png"%>
       </div>
       <div class="card-alternatives-left">
 <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
