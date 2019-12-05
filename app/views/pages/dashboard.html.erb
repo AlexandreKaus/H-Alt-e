@@ -1,10 +1,33 @@
 <div class="container">
-<h1><%= @user.username %>'s Dashboard</h1>
-  <% @alternatives_select.each do |alternative_select| %>
-   <p><%= alternative_select.title %></p>
+  <h1><%= @user.username %>'s Dashboard</h1>
+  <div class="dashed-card">
+    <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" alt="dash-pic">
+    <div class="dashed-title">
+      <% @alternatives_select.each do |alternative_select| %>
+      <p><%= alternative_select.title %></p>
+    </div>
     <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
     <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
+      <% end %>
+      <%= link_to edit_alternative_path(alternative_select) do %>
+    <i class="fa fa-edit edit_seed"></i> Edit</p>
     <% end %>
+<<<<<<< HEAD
+    <% end %>
+    <% @reviews_select.each do |review| %>
+    <ul>
+      <li><%= review.alternative.title %></li>
+      <p><i><%= review.comment %><i></p>
+    </ul>
+    <% end %>
+    <% @upvotes_select.each do |upvote| %>
+    <ul>
+      <li><%= upvote.alternative.title %></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+=======
 
   <% end %>
 
@@ -18,7 +41,7 @@
 <% @upvotes_select.each do |upvote| %>
   <ul>
     <li><%= upvote.alternative.title %></li>
-
   </ul>
   <% end %>
+>>>>>>> 5e7685d79d021dd10313e1ac19471372a052ca49
 </div>
