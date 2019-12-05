@@ -51,6 +51,30 @@ end
   user.save!
 end
 
+user = User.new(
+    username: 'bogoss-du-92-et-du-13',
+    email: 'bogoss-du-92-et-du-13@hotmail.com',
+    password: 'password',
+  )
+  user.save!
+end
+
+user = User.new(
+    username: 'bogoss-du-13',
+    email: 'bogoss-du-13@hotmail.com',
+    password: 'password',
+  )
+  user.save!
+end
+
+user = User.new(
+    username: 'bogoss-du-57-et-du-13',
+    email: 'bogoss-du-57-et-du-13@hotmail.com',
+    password: 'password',
+  )
+  user.save!
+end
+
 puts 'Finished!'
 
 puts "user created : #{User.count} "
