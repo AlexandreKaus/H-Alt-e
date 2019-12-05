@@ -12,6 +12,12 @@
   <ul>
     <li><%= review.alternative.title %></li>
     <p><i><%= review.comment %><i></p>
+   </ul>
+  <% end %>
+
+<% @upvotes_select.each do |upvote| %>
+  <ul>
+    <li><%= upvote.alternative.title %></li>
 
   </ul>
   <% end %>

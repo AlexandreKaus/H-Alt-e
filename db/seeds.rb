@@ -57,7 +57,6 @@ user = User.new(
     password: 'password',
   )
   user.save!
-end
 
 user = User.new(
     username: 'bogoss-du-13',
@@ -65,7 +64,7 @@ user = User.new(
     password: 'password',
   )
   user.save!
-end
+
 
 user = User.new(
     username: 'bogoss-du-57-et-du-13',
@@ -73,7 +72,7 @@ user = User.new(
     password: 'password',
   )
   user.save!
-end
+
 
 puts 'Finished!'
 
