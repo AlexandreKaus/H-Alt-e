@@ -23,10 +23,10 @@ class PagesController < ApplicationController
       upvote.user == @user
     end
 
-    upvotes_select
+    # upvotes_select
 
-  #   upvoted_posts = Upvote.all
-  #   @alternatives_upvoted = []
+    # upvoted_posts = Upvote.all
+    # @alternatives_upvoted = []
 
   #   @upvoted_posts_select = upvoted_posts.select do |upvoted_post|
   #     upvoted_post.user == @user
