@@ -15,6 +15,7 @@ User.destroy_all
 puts 'Creating 10 fake user...'
 5.times do
   user = User.new(
+    username: Faker::Internet.username,
     email: Faker::Internet.email,
     password: 'password',
   )
@@ -43,6 +44,7 @@ end
 
 5.times do
   user = User.new(
+    username: Faker::Internet.username,
     email: Faker::Internet.email,
     password: 'password',
   )
