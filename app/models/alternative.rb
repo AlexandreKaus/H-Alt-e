@@ -9,7 +9,13 @@ class Alternative < ApplicationRecord
   validates :ingredients, presence: true
   validates :difficulty, presence: true
   validates :prep_time, presence: true
-  # acts_as_taggable
+
+  acts_as_taggable
+
+  acts_as_taggable_on :alimentations
+
+  $list_of_tags = ["Bio", "Vegan", "Gluten Free"]
+
 
   include PgSearch::Model
   pg_search_scope :search_alternative,

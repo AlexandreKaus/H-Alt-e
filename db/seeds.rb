@@ -11,6 +11,9 @@ puts 'Clean database...'
 
 User.destroy_all
 
+# ActsAsTaggableOn::Tag.create(name: "TagName")
+#pluck just les name
+
 
 puts 'Creating 10 fake user...'
 5.times do
@@ -28,6 +31,7 @@ puts 'Creating 10 fake user...'
     ingredients: Faker::Food.ingredient,
     difficulty: Faker::Number.between(from: 1, to: 5),
     prep_time: Time.now,
+    alimentation_list: $list_of_tags.sample,
     user: user,
     )
     alternative.save!
