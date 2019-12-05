@@ -20,6 +20,26 @@
   font-size: 18px;
 }
 
+.dropdown-menu {
+  background-color: $dark-green;
+  border-style: none;
+}
+
+
+.dropdown-item:hover {
+  color: white !important;
+  background-color: $dark-green !important;
+  text-decoration: underline;
+}
+
 a {
   color: $white !important;
+}
+
+.nav-item {
+  justify-content: space-between;
+}
+
+.srch {
+  justify-content: space-between;
 }
