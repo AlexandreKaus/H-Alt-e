@@ -1,4 +1,5 @@
-<h1>Dashboard de <%= @user.username %></h1>
+<div class="container">
+<h1><%= @user.username %>'s Dashboard</h1>
   <% @alternatives_select.each do |alternative_select| %>
    <p><%= alternative_select.title %></p>
     <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
@@ -11,6 +12,13 @@
   <ul>
     <li><%= review.alternative.title %></li>
     <p><i><%= review.comment %><i></p>
+   </ul>
+  <% end %>
+
+<% @upvotes_select.each do |upvote| %>
+  <ul>
+    <li><%= upvote.alternative.title %></li>
 
   </ul>
   <% end %>
+</div>

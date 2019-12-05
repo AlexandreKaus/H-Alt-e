@@ -18,6 +18,13 @@ class PagesController < ApplicationController
       review.user == @user
     end
 
+    upvotes = Upvote.all
+    @upvotes_select = upvotes.select do |upvote|
+      upvote.user == @user
+    end
+
+    upvotes_select
+
   #   upvoted_posts = Upvote.all
   #   @alternatives_upvoted = []
 

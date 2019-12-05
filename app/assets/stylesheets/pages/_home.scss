@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+.green {
+  z-index: 0;
+  background-color: $dark-green;
+  padding-bottom: 40px;
+}
 .container {
   margin: 40px, 40px, 0, 40px;
 }
@@ -20,7 +25,8 @@ p {
 }
 .daily-alt {
   width: 850px;
-  margin-top: 40px;
+  margin-top: 120px;
+  margin-bottom: 200px;
 }
 .description {
   margin-left: 20px;

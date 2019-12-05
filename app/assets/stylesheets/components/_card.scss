@@ -17,6 +17,34 @@
   text-align: center;
 }
 
+.card-alternatives-container {
+  display: flex;
+  justify-content: space-between;
+  width: 920px;
+}
+.property {
+  font-family: "Noto Sans", "Helvetica", "sans-serif";
+  font-size: 14px;
+}
+p {
+  font-size: 18px;
+}
+.card-alternatives {
+
+}
+
+.card-alternatives-left {
+  width: 420px;
+  margin-left: 20px;
+}
+.card-alternatives-right {
+  width: 420px;
+}
+.separator {
+  margin: auto;
+  border-right: 1px solid;
+  height: 20px;
+}
 // .card-product-infos p {
 //   text-align: center;
 // }

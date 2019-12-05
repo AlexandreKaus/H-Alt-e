@@ -2,6 +2,5 @@
 //= require jquery
 //= require_tree .
 
-$('#alternative_difficulty').rating()
 
 
