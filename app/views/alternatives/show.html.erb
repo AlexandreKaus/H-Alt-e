@@ -10,7 +10,6 @@
             <%= link_to '', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn u-vote-unactive'%>
             <p>Bad alternative</p>
             <%= link_to '', alternative_downvote_path(@alternative.id), method: :post, class: 'btn d-vote-unactive'%>
-            <!-- route :  /alternatives/:alternative_id/upvotes/:id(.:format -->
           </div>
         </div>
         <div class="ingredients">
@@ -18,6 +17,7 @@
             <p><%= @alternative.difficulty %></p>
             <p><%= @upvote_count - @downvote %></p>
           </div>
+          <h3>Ingredient</h3>
           <p><%= @alternative.ingredients %></p>
         </div>
       </div>
@@ -26,11 +26,33 @@
         <p><%= @alternative.description %></p>
       </div>
     </div>
-    <h3>Reviews</h3>
+    </div>
+
+    <div class="white-line"></div>
+
+      <div class="box-stepcard">
+          <% @alternative.photos.each do |photo| %>
+        <div class="stepcard">
+          <h3><%= photo.step %> - <%= photo.name %></h3>
+          <div class="stepcard-text">
+            <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+            <div class="ntm">
+            <p><%= photo.detail %></p>
+            </div>
+          </div>
+      </div>
+          <% end %>
+
+    <div class="white-line"></div>
+    <div class="reviews-card">
+    </div>
+  </div>
+  <div class="reviews-card">
+    <ul class="list-group">
+  <p>Reviews</p>
     <% if @alternative.reviews.empty? %>
     <p>Be the first to let a review</p>
     <% else %>
-    <ul class="list-group">
       <% @alternative.reviews.each do |review| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">
@@ -40,35 +62,10 @@
         <% end %>
       </ul>
     <% end %>  </div>
-    <div class="white-line"></div>
-    <div class="stepcard">
-      <p>1<sup>st</sup> Step</p>
-      <div class="desc-step d-flex">
-        <img src="https://s3-us-west-2.amazonaws.com/lia-griffith-media/wp-content/uploads/2014/03/LipBalmIngredients.jpg" class="step-img">
-        <p>In a small dish mix together the coconut oil, beeswax pellets, and almond oil.</p>
-        <!-- AJOUTER STEP ICI A LA PLACE DU TEXT TEST-->
-      </div>
-    </div>
-    <div class="white-line"></div>
-    <div class="reviews-card">
-      <p>Reviews</p>
-    </div>
-  </div>
-  <div class="white-line"></div>
- <div class="reviews-card">
-   <p>Reviews</p>
+    <%= render "reviews/new", alternative: @alternative, review: @review %>
  </div>
  <div class="white-line"></div>
 </div>
-<%= render "reviews/new", alternative: @alternative, review: @review %>
 
-<% @alternative.photos.each do |photo| %>
-<ul>
-  <li><%= photo.step %></li>
-  <li><%= photo.name %></li>
-  <li><%= photo.detail %></li>
-  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
-</ul>
-<% end %>
 
 <h1><%= @alternative.alimentation_list %></h1>
