@@ -2,7 +2,11 @@ class AlternativesController < ApplicationController
   before_action :set_alternatives, only: %i[show destroy edit update]
 
   def index
-    @alternatives = Alternative.all
+    if params[:query].present?
+      @alternatives = Alternative.search_alternative(params[:query])
+    else
+      @alternatives = Alternative.all
+    end
   end
 
   def show
@@ -19,7 +23,7 @@ class AlternativesController < ApplicationController
     @alternative = Alternative.new(alternative_params)
     @alternative.user = current_user
     if @alternative.save
-      redirect_to alternative_path(@alternative)
+      redirect_to new_alternative_photo_path(@alternative)
     else
       render 'new'
     end

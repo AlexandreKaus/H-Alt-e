@@ -1,8 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
-
-
+@import "new";
 .card-alternatives-container {
   display: flex;
   justify-content: space-between;
@@ -16,15 +15,15 @@ p {
   font-size: 18px;
 }
 .card-alternatives {
-
 }
-
 .card-alternatives-left {
   width: 420px;
   margin-left: 20px;
+  margin-right: 10px;
 }
 .card-alternatives-right {
   width: 420px;
+  margin-left: 10px;
 }
 .separator {
   margin: auto;
