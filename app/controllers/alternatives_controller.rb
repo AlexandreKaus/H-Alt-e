@@ -23,7 +23,7 @@ class AlternativesController < ApplicationController
     @alternative = Alternative.new(alternative_params)
     @alternative.user = current_user
     if @alternative.save
-      redirect_to alternative_path(@alternative)
+      redirect_to new_alternative_photo_path(@alternative)
     else
       render 'new'
     end
