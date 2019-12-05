@@ -1,1 +1,16 @@
 <h1>Dashboard de <%= @user.username %></h1>
+  <% @alternatives_select.each do |alternative_select| %>
+   <p><%= alternative_select.title %></p>
+    <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
+    <% end %>
+
+  <% end %>
+
+  <% @reviews_select.each do |review| %>
+  <ul>
+    <li><%= review.alternative.title %></li>
+    <p><i><%= review.comment %><i></p>
+
+  </ul>
+  <% end %>
