@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :alternatives do
-    resources :reviews, only: [:create]
+    resources :reviews, only: :create
     resources :upvotes, only: :create
     post '/downvote', to: 'upvotes#custom', as: :downvote
   end
-  resources :alternatives
 end

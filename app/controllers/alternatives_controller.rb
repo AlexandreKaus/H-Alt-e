@@ -39,7 +39,7 @@ class AlternativesController < ApplicationController
 
   def destroy
     @alternative.destroy
-    redirect_to alternative_path(@alternative)
+    redirect_to dashboard_path
   end
 
   private

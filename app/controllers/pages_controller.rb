@@ -7,18 +7,16 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    raise
 
+    alternatives = Alternative.all
+    @alternatives_select = alternatives.select do |alternative|
+      alternative.user == @user
+    end
 
-  #   alternatives = Alternative.all
-  #   @alternatives_select = alternatives.select do |alternative|
-  #     alternative.user == @user
-  #   end
-
-  #   reviews = Review.all
-  #   @reviews_select = reviews.select do |review|
-  #     review.user == @user
-  #   end
+    reviews = Review.all
+    @reviews_select = reviews.select do |review|
+      review.user == @user
+    end
 
   #   upvoted_posts = Upvote.all
   #   @alternatives_upvoted = []
