@@ -7,7 +7,6 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    raise
 
     alternatives = Alternative.all
     @alternatives_select = alternatives.select do |alternative|
@@ -19,15 +18,15 @@ class PagesController < ApplicationController
       review.user == @user
     end
 
-    upvoted_posts = Upvote.all
-    @alternatives_upvoted = []
+  #   upvoted_posts = Upvote.all
+  #   @alternatives_upvoted = []
 
-    @upvoted_posts_select = upvoted_posts.select do |upvoted_post|
-      upvoted_post.user == @user
-    end
+  #   @upvoted_posts_select = upvoted_posts.select do |upvoted_post|
+  #     upvoted_post.user == @user
+  #   end
 
-    @upvoted_posts_select.each do |up|
-      @alternatives_upvoted << up.alternative
-    end
+  #   @upvoted_posts_select.each do |up|
+  #     @alternatives_upvoted << up.alternative
+  #   end
   end
 end
