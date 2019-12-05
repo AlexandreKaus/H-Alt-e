@@ -6,7 +6,8 @@
         <div class="left-infos">
           <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
 <%= link_to 'Upvote', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
-<%= link_to 'Downvote', alternative_downvote_path(@alternative.id), method: :post, class: 'btn btn-primary'%>
+<%= link_to '', alternative_downvote_path(@alternative.id), method: :post, class: 'd-vote-active'%>
+<div class="d-vote-active"></div>
 <!-- route :  /alternatives/:alternative_id/upvotes/:id(.:format -->
 <h1><%= @upvote_count - @downvote %></h1>
         </div>

@@ -3,6 +3,7 @@
 <div class="container">
   <div class="card-alternatives-container">
       <div class="index-img">
+         <%= cl_image_tag alternative.photos.first.photo %>
       </div>
       <div class="card-alternatives-left">
 <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
@@ -12,12 +13,11 @@
       <div class="separator"></div>
     <div class="card-alternatives-right">
     <div class="property">D.I.Y. </div>
-<p> <i class="far fa-clock"></i><%= alternative.prep_time %> min.</p>
+<p> <i class="far fa-clock"></i> <%= alternative.prep_time %> min.</p>
     </div>
   </div>
 </div>
 <div class="white-line"></div>
-<% alternative.photos.each do |pic| %>
-  <%= cl_image_tag pic.photo %>
 <% end %>
-<% end %>
+
+<script type="text/javascript" src="dist/js/jquery-1.10.2.js"></script>
