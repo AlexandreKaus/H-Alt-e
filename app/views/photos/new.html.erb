@@ -1,27 +1,24 @@
-<% photo_all = Photo.all.select do |pho| %>
-<% pho.alternative == @alternative.id  %>
+<% @alternative.photos.each do |photo| %>
+<ul>
+  <li><%= photo.step %></li>
+  <li><%= photo.name %></li>
+  <li><%= photo.detail %></li>
+  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
+</ul>
 <% end %>
-
-<% photo_all.each do |photo| %>
-<h1><%= photo.name %></h1>
-<h1><%= photo.detail %></h1>
-<h1><%= photo.step %></h1>
-<% end  %>
-
-
-
 
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8 col-md-6">
     <div class="form-container">
       <div class="form">
         <%= simple_form_for [@alternative, @photo] do |f| %>
+        <%= f.input :step %>
         <%= f.input :name %>
         <%= f.input :detail %>
-        <%= f.input :step %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary2' %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= link_to 'Done!', alternative_path(@alternative.id), class: 'btn btn-primary'%>
       <% end %>
       </div>
     </div>

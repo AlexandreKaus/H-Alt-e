@@ -8,11 +8,11 @@ class PhotosController < ApplicationController
   def create
     @alternative = Alternative.find(params[:alternative_id])
     @photo = Photo.new(photo_params)
-    @photo.alternative = @alternatives
+    @photo.alternative = @alternative
     if @photo.save
       redirect_to new_alternative_photo_path(@alternative)
     else
-      redirect_to new_alternative_photo_path(@alternative)
+      raise
     end
   end
 
