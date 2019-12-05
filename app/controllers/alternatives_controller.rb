@@ -2,7 +2,11 @@ class AlternativesController < ApplicationController
   before_action :set_alternatives, only: %i[show destroy edit update]
 
   def index
-    @alternatives = Alternative.all
+    if params[:query].present?
+      @alternatives = Alternative.search_alternative(params[:query])
+    else
+      @alternatives = Alternative.all
+    end
   end
 
   def show
