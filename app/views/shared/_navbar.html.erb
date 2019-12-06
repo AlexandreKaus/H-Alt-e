@@ -7,16 +7,25 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <div class="searchbar d-flex">
+<div class="searchbar">
+        <div class="searching">Search&nbsp;:</div>
+      <div class="content">
     <%= form_tag alternatives_path, class: "barbar", method: :get do %>
-       <%= submit_tag "Search", class: "btn btn-primary" %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a Alt!"
-        %>
+          placeholder: ""%>
+        </div>
+        <div class="search d-flex transp-yes">
+        <%= submit_tag "" do %>
+          <div class="transp-no"><i class="fas fa-search"></i></div>
+        <% end %>
+
+
     <% end %>
+    </div>
   </div>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -30,8 +39,9 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item d-flex">
+          <li class="nav-item d-flex">
           <%= link_to "Sign-in", new_user_session_path, class: "nav-link" %>
+          <div class="sign-separator">|</div>
           <%= link_to "Sign-up", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>

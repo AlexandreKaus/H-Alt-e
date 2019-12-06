@@ -27,20 +27,43 @@ width: 100%;
 
 }
 
-/* Idle State of the stars */
-.rating-stars ul > li.star > i.fa {
-  font-size:2.5em; /* Change the size of the stars */
-  color:#fff; /* Color on idle state */
-  border-color:  $dark-green;
+// /* Idle State of the stars */
+// .rating-stars ul > li.star > i.fa {
+//   font-size:2.5em; /* Change the size of the stars */
+//   color:#fff; /* Color on idle state */
+// }
+
+// /* Hover state of the stars */
+// .rating-stars ul > li.dot.hover > span.dot {
+//   color: $dark-green;
+// }
+
+// /* Selected state of the stars */
+// .rating-stars ul > li.star.selected > i.fa {
+//   color: $dark-green;
+// }
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-/* Hover state of the stars */
-.rating-stars ul > li.star.hover > i.fa {
-  color: $dark-green;
-
+.dot:hover {
+  height: 25px;
+  width: 25px;
+  border: white 2px solid;
+  background-color: $dark-green;
+  border-radius: 50%;
+  display: inline-block;
 }
-
-/* Selected state of the stars */
-.rating-stars ul > li.star.selected > i.fa {
-  color: $dark-green;
+.dot.selected {
+  height: 25px;
+  width: 25px;
+  border: white 2px solid;
+  background-color: $dark-green;
+  border-radius: 50%;
+  display: inline-block;
 }

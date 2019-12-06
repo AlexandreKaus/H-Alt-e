@@ -30,9 +30,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_155750) do
 
   create_table "photos", force: :cascade do |t|
     t.string "photo"
-    t.string "name"
-    t.text "detail"
-    t.integer "step"
     t.bigint "alternative_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

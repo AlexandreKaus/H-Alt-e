@@ -43,3 +43,42 @@ a {
 .srch {
   justify-content: space-between;
 }
+#query{
+  color: $white;
+  background:none ;
+  border: none;
+  box-shadow: none;
+  width: 200px;
+}
+.sign-separator {
+  margin: auto;
+  border: none !important;
+  height: 12px;
+}
+.searchbar {
+  display:flex;
+  justify-content:space-between;
+  width: 200px;
+}
+.searchbar ::placeholder {
+  color: $white;
+}
+.searching {
+  margin: auto;
+  font-family: "Noto Sans", "Helvetica", "sans-serif";
+  font-size: 18px;
+}
+.input{
+  background:none;
+}
+// div.searchbar > div.search.d-flex {
+// z-index: 100}
+.transp-yes {
+  opacity: 0;
+  z-index: -1
+}
+
+i .transp-no {
+  opacity: 1;
+  z-index: 1
+}
