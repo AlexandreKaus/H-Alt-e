@@ -4,6 +4,8 @@
   grid-gap: 16px;
   margin-top: 20px;
   margin-bottom: 50px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
 }
 
 .box-stepcard .stepcard {
@@ -48,4 +50,21 @@
 
 .reviews-card .white-line {
   width: 100%;
+}
+
+.item-infos .description-right {
+    text-align: justify;
+}
+
+.badge {
+  border-style: none;
+  background-color: white;
+  color: black;
+}
+
+.badge p {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: justify;
+  font-family: "Franck Ruhl Libre", "Georgia", "serif";
 }

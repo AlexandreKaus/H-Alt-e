@@ -14,20 +14,20 @@
         <div class="diff-time d-flex">
         </div>
         <div class="ingredients">
-          <h3>Ingredient</h3>
+          <h3><u>Ingredients</u></h3>
           <p><%= @alternative.ingredients %></p>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-circle"></i>
           <% end %>
           <% count_2 = 5 - count %>
             <% count_2.times do %>
-          <i class="far fa-star"></i>
+            <i class="far fa-circle"></i>
           <% end %>
         </div>
       </div>
       <div class="description-right">
-        <p>Description</p>
+        <h3><u>Description</u></h3>
         <p><%= @alternative.description %></p>
       </div>
     </div>
@@ -56,8 +56,9 @@
       <% @alternative.reviews.each do |review| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">
-          <%= review.comment %>
-          <%= review.created_at %>
+          <h3><u><%= review.user.username %></u></h3>
+          <p><i><%= review.comment %></i></p>
+          le :<%= review.created_at.strftime("%d/%m/%Y") %>
         </li>
         <% end %>
       </ul>
