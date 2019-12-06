@@ -15,7 +15,7 @@
         <section class='rating-widget'>
 
    <!-- Rating Stars Box -->
-  <div class='rating-stars text-center'>
+ <!--  <div class='rating-stars text-center'>
     <ul id='stars'>
       <li class='star' title='Poor' data-value='1'>
         <span class="dot"></span>
@@ -34,7 +34,7 @@
       </li>
     </ul>
   </div>
-        <%= f.input :prep_time %>
+ -->        <%= f.input :prep_time %>
         <%= f.input :alimentation_list, label: "Alimentation",  collection: $list_of_tags, as: :check_boxes %>
         <%= f.button :submit, class: 'btn btn-primary2' %>
       <% end %>

@@ -1,31 +1,44 @@
-<div class="container">
-  <h1><%= @user.username %>'s Dashboard</h1>
-  <div class="dashed-card">
-    <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" alt="dash-pic">
-    <div class="dashed-title">
-      <% @alternatives_select.each do |alternative_select| %>
-      <p><%= alternative_select.title %></p>
-    </div>
+<div class="dashcontainer">
+<h1><%= @user.username %>'s Dashboard</h1>
+<div id="dash-hds">My D.I.Y.'s :</div>
+<div class="dash-white-line"></div>
+<div class="mydiy-card d-flex">
+  <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
+  <!-- div class="dashoptions"> -->
+  <div class="mydiy-opt">
+    <% @alternatives_select.each do |alternative_select| %>
+    <p id="title-my"><%= alternative_select.title %></p>
     <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
     <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
       <% end %>
       <%= link_to edit_alternative_path(alternative_select) do %>
     <i class="fa fa-edit edit_seed"></i> Edit</p>
     <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="dash-white-line"></div>
 
-    <% end %>
-    <% @reviews_select.each do |review| %>
-    <ul>
-      <li><%= review.alternative.title %></li>
-      <p><i><%= review.comment %><i></p>
-    </ul>
-    <% end %>
-    <% @upvotes_select.each do |upvote| %>
-    <ul>
-      <li><%= upvote.alternative.title %></li>
-    </ul>
+
+<div id="dash-hds">My reviews</div>
+
+<div class="myrev-card d-flex">
+  <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="dash-img" alt="dash-pic">
+  <!-- div class="dashoptions"> -->
+  <div class="myrev-opt">
+    <% @reviews_select.each do |review_select| %>
+    <p id="title-my"><%= review_select.alternative.title %></p>
+    <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
+      <% end %>
     <% end %>
   </div>
 </div>
 
+<div class="dash-white-line"></div>
+
 </div>
+
+
+
+

@@ -64,6 +64,14 @@
         <% end %>
       </ul>
     <% end %>  </div>
+    <% @alternative.photos.each do |photo| %>
+<ul>
+  <li><%= photo.step %></li>
+  <li><%= photo.name %></li>
+  <li><%= photo.detail %></li>
+  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
+</ul>
+<% end %>
     <%= render "reviews/new", alternative: @alternative, review: @review %>
   </div>
   <div class="white-line"></div>
