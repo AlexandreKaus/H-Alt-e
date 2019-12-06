@@ -7,13 +7,20 @@
       </div>
       <div class="card-alternatives-left">
 <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
-<div class="property"> <%= alternative.difficulty %> </div>
+<% count = alternative.difficulty.to_i %>
+          <% count.times do %>
+            <i class="fas fa-circle"></i>
+          <% end %>
+          <% count_2 = 5 - count %>
+            <% count_2.times do %>
+            <i class="far fa-circle"></i>
+          <% end %>
 <p> <%= alternative.description %> </p>
     </div>
       <div class="separator"></div>
     <div class="card-alternatives-right">
     <div class="property">D.I.Y. </div>
-<p> <i class="far fa-clock"></i> <%= alternative.prep_time %> min.</p>
+<p> <i class="far fa-clock"></i> <%= alternative.prep_time.strftime("%H:%M:%S") %> min.</p>
     </div>
   </div>
 </div>

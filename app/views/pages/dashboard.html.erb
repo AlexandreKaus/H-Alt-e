@@ -12,7 +12,7 @@
       <%= link_to edit_alternative_path(alternative_select) do %>
     <i class="fa fa-edit edit_seed"></i> Edit</p>
     <% end %>
-<<<<<<< HEAD
+
     <% end %>
     <% @reviews_select.each do |review| %>
     <ul>
@@ -27,21 +27,5 @@
     <% end %>
   </div>
 </div>
-=======
 
-  <% end %>
-
-  <% @reviews_select.each do |review| %>
-  <ul>
-    <li><%= review.alternative.title %></li>
-    <p><i><%= review.comment %><i></p>
-   </ul>
-  <% end %>
-
-<% @upvotes_select.each do |upvote| %>
-  <ul>
-    <li><%= upvote.alternative.title %></li>
-  </ul>
-  <% end %>
->>>>>>> 5e7685d79d021dd10313e1ac19471372a052ca49
 </div>
