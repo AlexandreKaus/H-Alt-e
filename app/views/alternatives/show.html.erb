@@ -1,58 +1,58 @@
 <div class="container">
   <div class="about-container">
-    <h1> <%= @alternative.title %> </h1>
+    <h1> <%= @alternative.title %>      <i class="fas fa-leaf"></i> <%= @upvote_count - @downvote %></h1>
     <div class="item-infos d-flex">
       <div class="group-item">
         <div class="left-infos">
           <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
+          <p><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></p>
           <div class="upvotes d-flex">
-            <p>Good alternative</p>
-            <%= link_to '', alternative_upvotes_path(@alternative.id), method: :post, class: 'btn u-vote-unactive'%>
-            <p>Bad alternative</p>
-            <%= link_to '', alternative_downvote_path(@alternative.id), method: :post, class: 'btn d-vote-unactive'%>
+            <%= link_to ' Good alternative ', alternative_upvotes_path(@alternative.id), method: :post, class: 'fas fa-leaf'%>
+            <%= link_to ' Bad alternative ', alternative_downvote_path(@alternative.id), method: :post, class: 'fas fa-poo'%>
           </div>
         </div>
+        <div class="diff-time d-flex">
+        </div>
         <div class="ingredients">
-          <div class="diff-time d-flex">
-            <p><%= @alternative.difficulty %></p>
-            <p><%= @upvote_count - @downvote %></p>
-          </div>
           <h3>Ingredient</h3>
           <p><%= @alternative.ingredients %></p>
+          <% count = @alternative.difficulty.to_i %>
+          <% count.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% count_2 = 5 - count %>
+            <% count_2.times do %>
+          <i class="far fa-star"></i>
+          <% end %>
         </div>
       </div>
       <div class="description-right">
-        <p>About</p>
+        <p>Description</p>
         <p><%= @alternative.description %></p>
       </div>
     </div>
-    </div>
-
     <div class="white-line"></div>
-
-      <div class="box-stepcard">
-          <% @alternative.photos.each do |photo| %>
-        <div class="stepcard">
-          <h3><%= photo.step %> - <%= photo.name %></h3>
-          <div class="stepcard-text">
-            <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
-            <div class="ntm">
-            <p><%= photo.detail %></p>
-            </div>
-          </div>
+  </div>
+  <div class="box-stepcard">
+    <% @alternative.photos.each do |photo| %>
+    <div class="stepcard">
+      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <div class="stepcard-text">
+        <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+        <div class="ntm">
+          <p><%= photo.detail %></p>
+        </div>
       </div>
-          <% end %>
-
-    <div class="white-line"></div>
-    <div class="reviews-card">
     </div>
+    <% end %>
   </div>
   <div class="reviews-card">
+  <div class="white-line"></div>
     <ul class="list-group">
-  <p>Reviews</p>
-    <% if @alternative.reviews.empty? %>
-    <p>Be the first to let a review</p>
-    <% else %>
+      <p>Reviews</p>
+      <% if @alternative.reviews.empty? %>
+      <p>Be the first to let a review</p>
+      <% else %>
       <% @alternative.reviews.each do |review| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">
@@ -63,9 +63,6 @@
       </ul>
     <% end %>  </div>
     <%= render "reviews/new", alternative: @alternative, review: @review %>
- </div>
- <div class="white-line"></div>
+  </div>
+  <div class="white-line"></div>
 </div>
-
-
-<h1><%= @alternative.alimentation_list %></h1>
