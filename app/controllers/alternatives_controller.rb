@@ -3,7 +3,8 @@ class AlternativesController < ApplicationController
 
   def index
     if params[:query].present?
-      @alternatives = Alternative.search_alternative(params[:query])
+      alternatives = Alternative.search_alternative(params[:query])
+      @alternatives = alternatives.all.tagged_with(["bio"])
     else
       @alternatives = Alternative.all
     end
