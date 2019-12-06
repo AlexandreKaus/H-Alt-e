@@ -50,8 +50,30 @@
 //   height: 20px;
 //   width: 20px;
 // }
-.d-vote-active{
-  background-image: url("../../images/d-vote-active.png");
+.u-vote-active{
+  background-image: url("https://res.cloudinary.com/dgpkng6h9/image/upload/v1575535255/H-Alt-e/iconset/u-vote-active.png");
   width: 22px;
   height:22px;
+  background-size: cover;
+}
+
+.u-vote-unactive{
+  background-image: url("https://res.cloudinary.com/dgpkng6h9/image/upload/v1575535255/H-Alt-e/iconset/u-vote-unactive.png");
+  width: 22px;
+  height:22px;
+  background-size: cover;
+}
+
+.d-vote-active{
+  background-image: url("https://res.cloudinary.com/dgpkng6h9/image/upload/v1575535255/H-Alt-e/iconset/d-vote-active.png");
+  width: 22px;
+  height:22px;
+  background-size: cover;
+}
+
+.d-vote-unactive{
+  background-image: url("https://res.cloudinary.com/dgpkng6h9/image/upload/v1575535255/H-Alt-e/iconset/d-vote-unactive.png");
+  width: 22px;
+  height:22px;
+  background-size: cover;
 }
