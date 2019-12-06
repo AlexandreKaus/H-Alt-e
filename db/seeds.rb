@@ -32,6 +32,7 @@ puts 'Creating 10 fake user...'
     difficulty: Faker::Number.between(from: 1, to: 5),
     prep_time: Time.now,
     alimentation_list: $list_of_tags.sample,
+    pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
     user: user,
     )
     alternative.save!
@@ -40,7 +41,7 @@ puts 'Creating 10 fake user...'
       photo = Photo.new(
         alternative: alternative
         )
-      photo.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
+      photo.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
       photo.save!
     end
   end

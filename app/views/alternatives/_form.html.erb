@@ -12,29 +12,9 @@
         <%= f.input :description %>
         <%= f.input :ingredients %>
         <%= f.input :difficulty %>
-        <section class='rating-widget'>
-
-   <!-- Rating Stars Box -->
- <!--  <div class='rating-stars text-center'>
-    <ul id='stars'>
-      <li class='star' title='Poor' data-value='1'>
-        <span class="dot"></span>
-      </li>
-      <li class='star' title='Fair' data-value='2'>
-        <span class="dot"></span>
-      </li>
-      <li class='star' title='Good' data-value='3'>
-        <span class="dot"></span>
-      </li>
-      <li class='star' title='Excellent' data-value='4'>
-        <span class="dot"></span>
-      </li>
-      <li class='star' title='WOW!!!' data-value='5'>
-        <span class="dot"></span>
-      </li>
-    </ul>
-  </div>
- -->        <%= f.input :prep_time %>
+        <%= f.input :prep_time %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.input :alimentation_list, label: "Alimentation",  collection: $list_of_tags, as: :check_boxes %>
         <%= f.button :submit, class: 'btn btn-primary2' %>
       <% end %>
