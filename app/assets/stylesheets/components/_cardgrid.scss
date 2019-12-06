@@ -1,0 +1,72 @@
+.box-stepcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.box-stepcard .stepcard {
+  background-size: cover;
+  width: 100%;
+}
+
+.stepcard-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepcard-text .step-img {
+  height: 200px;
+  width: 300px;
+}
+
+.ntm {
+  margin-left: 25px;
+  width: auto;
+}
+
+.ntm p {
+  font-size: 18px;
+  text-align: justify;
+  font-family: "Franck Ruhl Libre", "Georgia", "serif";
+}
+
+.upvotes {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.item-infos {
+  margin-bottom: 50px;
+}
+
+.about-container .white-line {
+  width: 100%;
+}
+
+.reviews-card .white-line {
+  width: 100%;
+}
+
+.item-infos .description-right {
+    text-align: justify;
+}
+
+.badge {
+  border-style: none;
+  background-color: white;
+  color: black;
+}
+
+.badge p {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: justify;
+  font-family: "Franck Ruhl Libre", "Georgia", "serif";
+}
+
+
