@@ -1,43 +1,38 @@
 <div class="dashcontainer">
-<h1><%= @user.username %>'s Dashboard</h1>
-<div id="dash-hds">My D.I.Y.'s :</div>
-<div class="dash-white-line"></div>
-<div class="mydiy-card d-flex">
-  <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
-  <!-- div class="dashoptions"> -->
-  <div class="mydiy-opt">
-    <% @alternatives_select.each do |alternative_select| %>
-    <p id="title-my"><%= alternative_select.title %></p>
-    <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
-      <% end %>
-      <%= link_to edit_alternative_path(alternative_select) do %>
-    <i class="fa fa-edit edit_seed"></i> Edit</p>
-    <% end %>
-    <% end %>
+  <h1><%= @user.username %>'s Dashboard</h1>
+  <div id="dash-hds">My D.I.Y.'s :</div>
+  <div class="dash-white-line"></div>
+  <!-- <div class="box-myrev"> -->
+    <div class="mydiy-card d-flex">
+      <div class="dashoptions">
+
+      <% @alternatives_select.each do |alternative_select| %>
+      <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
+      <div class="mydiy-opt">
+        <p id="title-my"><%= alternative_select.title %></p>
+        <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
+          <% end %>
+          <%= link_to edit_alternative_path(alternative_select) do %>
+        <i class="fa fa-edit edit_seed"></i> Edit</p>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
-<div class="dash-white-line"></div>
-
-
-<div id="dash-hds">My reviews</div>
-
-<div class="myrev-card d-flex">
-  <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="dash-img" alt="dash-pic">
-  <!-- div class="dashoptions"> -->
-  <div class="myrev-opt">
-    <% @reviews_select.each do |review_select| %>
-    <p id="title-my"><%= review_select.alternative.title %></p>
-    <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
-      <% end %>
-    <% end %>
+  <div class="dash-white-line"></div>
+  <div id="dash-hds">My reviews</div>
+  <div class="myrev-card d-flex">
+    <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="dash-img" alt="dash-pic">
+    <!-- div class="dashoptions"> -->
+    <div class="myrev-opt">
+      <% @reviews_select.each do |review_select| %>
+      <p id="title-my"><%= review_select.alternative.title %></p>
+      <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <p><i class="fa fa-trash destroy_seed"></i> Delete &nbsp;&nbsp;
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="dash-white-line"></div>
   </div>
-</div>
-
-<div class="dash-white-line"></div>
-</div>
-
-
-
-
