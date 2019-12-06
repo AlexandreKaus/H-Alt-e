@@ -62,13 +62,6 @@
 </div>
 <%= render "reviews/new", alternative: @alternative, review: @review %>
 
-<% @alternative.photos.each do |photo| %>
-<ul>
-  <li><%= photo.step %></li>
-  <li><%= photo.name %></li>
-  <li><%= photo.detail %></li>
-  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
-</ul>
-<% end %>
+
 
 <h1><%= @alternative.alimentation_list %></h1>
