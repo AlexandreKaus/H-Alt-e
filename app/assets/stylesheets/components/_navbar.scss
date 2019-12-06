@@ -48,7 +48,7 @@ a {
   background:none ;
   border: none;
   box-shadow: none;
-  width: 200px;
+  width: 300px;
 }
 .sign-separator {
   margin: auto;
@@ -58,11 +58,9 @@ a {
 .searchbar {
   display:flex;
   justify-content:space-between;
-  width: 200px;
+  width: 300px;
 }
-.searchbar ::placeholder {
-  color: $white;
-}
+
 .searching {
   margin: auto;
   font-family: "Noto Sans", "Helvetica", "sans-serif";
@@ -81,4 +79,8 @@ a {
 i .transp-no {
   opacity: 1;
   z-index: 1
+}
+body > div > div.navbar.navbar-expand-sm.navbar-light.navbar-lewagon > div.searchbar > div.search > input[type=submit] {
+  background:none;
+  z-index: -1000;
 }
