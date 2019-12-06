@@ -22,29 +22,74 @@
   justify-content: space-between;
   width: 920px;
 }
+
 .property {
   font-family: "Noto Sans", "Helvetica", "sans-serif";
   font-size: 14px;
 }
+
 p {
   font-size: 18px;
 }
-.card-alternatives {
 
+.mydiy-opt {
+  margin-left: 40px;
+}
+
+.myrev-opt {
+  margin-left: 40px;
+}
+
+.myrev-opt p {
+  font-size: 16px !important;
 }
 
 .card-alternatives-left {
   width: 420px;
   margin-left: 20px;
 }
+
 .card-alternatives-right {
   width: 420px;
 }
+
 .separator {
   margin: auto;
   border-right: 1px solid;
   height: 20px;
 }
+
+#title-my {
+  font-size: 30px;
+}
+
+// .mydiy-card  {
+//   height: 80px;
+// }
+
+.mydiy-card {
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+#dash-hds {
+  text-align: left;
+  font-size: 40px;
+  margin-left: 80px;
+  margin-top: 80px;
+
+}
+
+.myrev-card {
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+// .dashoptions {
+//   margin-left: 40px;
+// }
+
 // .card-product-infos p {
 //   text-align: center;
 // }

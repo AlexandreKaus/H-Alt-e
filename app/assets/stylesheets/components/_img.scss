@@ -27,6 +27,17 @@
   box-sizing: border-box;
   object-fit: cover;
 }
+
+.maindash-img {
+  width: 128px;
+  height: 128px;
+  -webkit-filter: url(#monochrome);
+  filter:  url(#monochrome);
+  border: 1px solid $dark-green;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
 .step-img {
   width: 288px;
   height: 216px;
