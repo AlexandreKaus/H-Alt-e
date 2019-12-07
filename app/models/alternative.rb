@@ -21,14 +21,11 @@ class Alternative < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_alternative,
     against: [:title, :description],
+    associated_against: {
+    alimentations: [:name], # Recherche dans la table tag alimentation
+  },
     using: {
 
       tsearch: { prefix: true }
     }
-      # associated_against: {
-      #   director: [ :first_name, :last_name ]
-      # },
-      # using: {
-
-      # to implement with taggable ??
 end
