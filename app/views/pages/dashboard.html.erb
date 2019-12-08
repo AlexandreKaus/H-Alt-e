@@ -22,27 +22,27 @@
   </div>
   <div class="dash-white-line"></div>
   <div class="gen-cont">
-  <div class="bottom-container">
-    <div id="dash-hds">My reviews</div>
-    <div class="box-myrev">
-      <!-- div class="dashoptions"> -->
-      <% @reviews_select.each do |review_select| %>
-      <div class="myrev-card d-flex">
-        <img src="https://images.ricardocuisine.com/services/recipes/7446.jpg" class="dash-img" alt="dash-pic">
-        <div class="myrev-opt">
-          <p id="title-rvw"><%= review_select.alternative.title %></p>
-          <p id="my-rev"><%= review_select.comment %></p>
+    <div class="bottom-container">
+      <div id="dash-hds">My reviews</div>
+      <div class="box-myrev">
+        <!-- div class="dashoptions"> -->
+        <% @reviews_select.each do |review_select| %>
+        <div class="myrev-card d-flex">
+          <img src="https://images.ricardocuisine.com/services/recipes/7446.jpg" class="dash-img" alt="dash-pic">
+          <div class="myrev-opt">
+            <p id="title-rvw"><%= review_select.alternative.title %></p>
+            <p id="my-rev"><%= review_select.comment %></p>
+          </div>
+          <div class="rest-rev ml-auto">
+            <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fa fa-trash destroy_seed"></i>
+            <% end %>
+          </div>
         </div>
-        <div class="rest-rev ml-auto">
-          <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fa fa-trash destroy_seed"></i>
-          <% end %>
-        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
-  </div>
-  <!-- <div class="vert-white-line"></div> -->
-  <div class="fav-div"></div>
+    <div class="vert-white-line"></div>
+    <div class="fav-div"></div>
   </div>
 </div>
