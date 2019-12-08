@@ -4,7 +4,7 @@
     <div class="item-infos d-flex">
       <div class="group-item">
         <div class="left-infos">
-          <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
+          <%= cl_image_tag @alternative.pic, crop: :fill, class: "step-img" %>
           <p><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></p>
           <div class="upvotes d-flex">
             <%= link_to ' Good alternative ', alternative_upvotes_path(@alternative.id), method: :post, class: 'fas fa-leaf'%>
@@ -16,6 +16,7 @@
         <div class="ingredients">
           <h3><u>Ingredients</u></h3>
           <p><%= @alternative.ingredients %></p>
+          <h3><u>Difficulty</u></h3>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
             <i class="fas fa-circle"></i>
@@ -63,14 +64,6 @@
         <% end %>
       </ul>
     <% end %>  </div>
-    <% @alternative.photos.each do |photo| %>
-<ul>
-  <li><%= photo.step %></li>
-  <li><%= photo.name %></li>
-  <li><%= photo.detail %></li>
-  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
-</ul>
-<% end %>
     <%= render "reviews/new", alternative: @alternative, review: @review %>
   </div>
   <div class="white-line"></div>
