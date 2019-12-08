@@ -1,32 +1,35 @@
-<div class="box-stepcard">
-  <% @alternative.photos.each do |photo| %>
-  <div class="stepcard">
-    <h3><%= photo.step %> - <%= photo.name %></h3>
-    <div class="stepcard-text">
-      <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
-      <div class="ntm">
-        <p><%= photo.detail %></p>
+<div class="container">
+  <div class="box-stepcard">
+    <% @alternative.photos.each do |photo| %>
+    <div class="stepcard">
+      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <div class="stepcard-text">
+        <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+        <div class="ntm">
+          <p><%= photo.detail %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 col-md-6">
+      <div class="form-container">
+        <div class="title"><h3>Add a step</h3></div>
+        <div class="form">
+          <%= simple_form_for [@alternative, @photo] do |f| %>
+          <%= f.input :step %>
+          <%= f.input :name %>
+          <%= f.input :detail %>
+          <%= f.input :photo, label: 'Upload Photo'%>
+          <%= f.input :photo_cache, as: :hidden %>
+          <div class="controlls"> <%= f.button_button t(".Add a step"), name: "submit", class: "btn" %>
+          <%= link_to 'Done', alternative_path(@alternative.id), class: "btn"%></div>
+<!-- <div class="good"><a href="<%= alternative_upvote_path(@alternative.id) %>" class=""><span class="fas fa-plus"></span> Good alternative</a></div> -->
+
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-  <% end %>
 </div>
-<div class="row justify-content-center">
-  <div class="col-12 col-sm-8 col-md-6">
-    <div class="form-container">
-      <div class="form">
-        <%= simple_form_for [@alternative, @photo] do |f| %>
-        <%= f.input :step %>
-        <%= f.input :name %>
-        <%= f.input :detail %>
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-        <%= link_to 'Done!', alternative_path(@alternative.id), class: 'btn btn-primary'%>
-      <% end %>
-      </div>
-    </div>
-  </div>
-
-</div>
-
