@@ -4,6 +4,7 @@ class AlternativesController < ApplicationController
   def index
     if params[:query].present?
       @alternatives = Alternative.search_alternative(params[:query])
+      # @alternatives = alternatives.all.tagged_with(params[:search)
     else
       @alternatives = Alternative.all
     end
@@ -53,6 +54,6 @@ class AlternativesController < ApplicationController
   end
 
   def alternative_params
-    params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, alimentation_list: [])
+    params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, :pic, alimentation_list: [])
   end
 end

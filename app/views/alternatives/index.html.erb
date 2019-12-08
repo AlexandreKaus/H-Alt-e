@@ -1,9 +1,14 @@
+<!-- Essai d'implementation des checkbox -->
+
+<!-- Essai d'implementation des checkbox -->
+
 <% @alternatives.each do |alternative| %>
 
 <div class="container">
   <div class="card-alternatives-container">
       <div class="index-img">
-         <%= cl_image_tag alternative.photos.first.try(:photo) || "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575542682/diy-img.png"%>
+         <%= cl_image_tag  "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"%>
+      <!-- alternative.photos.first.try(:photo) || -->
       </div>
       <div class="card-alternatives-left">
 <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
