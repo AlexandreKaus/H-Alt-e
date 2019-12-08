@@ -57,4 +57,4 @@ import "bootstrap";
 //   $('.success-box').fadeIn(200);
 //   $('.success-box div.text-message').html("<span>" + msg + "</span>");
 // }
-$( document ).ready(function() { $(".form-control").focus(); });
+$( document ).ready(function() { $("#query").focus(); });
