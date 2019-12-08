@@ -11,10 +11,6 @@ puts 'Clean database...'
 
 User.destroy_all
 
-# ActsAsTaggableOn::Tag.create(name: "TagName")
-#pluck just les name
-
-
 puts 'Creating 10 fake user...'
 5.times do
   user = User.new(
@@ -39,7 +35,7 @@ puts 'Creating 10 fake user...'
 
     3.times do
       photo = Photo.new(
-        alternative: alternative
+        alternative: alternative,
         )
       photo.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
       photo.save!
