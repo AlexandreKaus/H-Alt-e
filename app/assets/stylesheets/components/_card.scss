@@ -85,6 +85,7 @@ p {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 #title-rvw {
@@ -99,5 +100,38 @@ p {
   position: relative;
   top: 56%;
   margin-right: 30px;
+}
 
+.card-alternatives-container {
+  display: flex;
+  justify-content: space-between;
+  width: 920px;
+}
+.property {
+  font-family: "Noto Sans", "Helvetica", "sans-serif";
+  font-size: 14px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.card-alternatives-left {
+  width: 420px;
+  margin-left: 20px;
+  margin-right: 10px;
+
+}
+.card-alternatives-right {
+  width: 420px;
+  margin-left: 10px;
+}
+.separator {
+  margin: auto;
+  border-right: 1px solid;
+  height: 20px;
+}
+
+.box-myrev {
+  justify-content: space-between;
 }
