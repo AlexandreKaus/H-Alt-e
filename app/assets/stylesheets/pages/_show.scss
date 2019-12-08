@@ -29,11 +29,11 @@
 }
 
 .diff-time {
-  justify-content: space-between;
 }
 
 .upvotes {
-  margin-top: 10px;
+// display:flex;
+// justify-content: space-between;
 }
 
 .form-review {
@@ -42,4 +42,30 @@
 
 #new_review > div > label {
   opacity: 0;
+}
+.description {
+  text-align:center;
+  font-family: "Frank Rhule Libre", "Georgia", "serif";
+
+}
+#title-vote {
+  display:flex;
+  justify-content: end;
+}
+
+#title-vote > div{
+width: 310px
+}
+
+.first-comment {
+  font-size: 18px;
+}
+.votes {
+  font-family: "Noto Sans", "Helvetica", "Sans Serif";
+}
+.tag {
+  font-family: "Noto Sans", "Helvetica", "Sans Serif";
+}
+.left-infos {
+  width: 340px;
 }

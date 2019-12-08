@@ -1,7 +1,7 @@
 class UpvotesController < ApplicationController
-  before_action :set_params, only: %i[create custom]
+  before_action :set_params, only: %i[upvote downvote]
 
-  def create
+  def upvote
     @upvote = Upvote.new
     @upvote.user = current_user
     @upvote.alternative = @alternative
@@ -10,7 +10,7 @@ class UpvotesController < ApplicationController
 
   end
 
-  def custom
+  def downvote
     @upvote = Upvote.new
     @upvote.user = current_user
     @upvote.alternative = @alternative
