@@ -69,4 +69,13 @@
   font-family: "Franck Ruhl Libre", "Georgia", "serif";
 }
 
+.box-mydiy{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+.box-myrev{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
