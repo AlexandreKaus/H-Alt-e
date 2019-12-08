@@ -25,7 +25,9 @@
   border-style: none;
 }
 
-
+.dropdown-item {
+  text-align: right;
+}
 .dropdown-item:hover {
   color: white !important;
   background-color: $dark-green !important;

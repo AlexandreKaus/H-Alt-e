@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :alternatives do
     resources :reviews, only: :create
-    resources :upvotes, only: :create
     resources :photos, only: [:new, :create]
-    post '/downvote', to: 'upvotes#custom', as: :downvote
+    get '/downvote', to: 'upvotes#downvote', as: :downvote
+    get '/upvote', to: 'upvotes#upvote', as: :upvote
   end
   get '/alternatives/new/step', to: 'alternatives#step', as: :alternative_step
 end

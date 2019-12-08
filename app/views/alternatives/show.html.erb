@@ -1,34 +1,41 @@
 <div class="container">
   <div class="about-container">
-    <h1> <%= @alternative.title %>      <i class="fas fa-leaf"></i> <%= @upvote_count - @downvote %></h1>
+    <div id="title-vote">
+      <div class="title"><h1> <%= @alternative.title %></h1>
+      </div>
+    </div>
     <div class="item-infos d-flex">
       <div class="group-item">
         <div class="left-infos">
           <img src="https://uvmbored.com/wp-content/uploads/2019/09/lip-balm.jpeg" alt="test-img">
-          <p><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></p>
-          <div class="upvotes d-flex">
-            <%= link_to ' Good alternative ', alternative_upvotes_path(@alternative.id), method: :post, class: 'fas fa-leaf'%>
-            <%= link_to ' Bad alternative ', alternative_downvote_path(@alternative.id), method: :post, class: 'fas fa-poo'%>
+          <div class="tag"><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></div>
+          <div class="upvotes">
+            <div class="good"><a href="<%= alternative_upvote_path(@alternative.id) %>" class=""><span class="fas fa-plus"></span> Good alternative</a></div>
+            <div class="bad"><a href="<%= alternative_downvote_path(@alternative.id) %>" class=""><span class="fas fa-minus"></span> Bad alternative</a></div>
+            <div class="votes">
+              <i class="fas fa-leaf"></i> <%= @upvote_count - @downvote %>
+            </div>
           </div>
         </div>
         <div class="diff-time d-flex">
         </div>
         <div class="ingredients">
-          <h3><u>Ingredients</u></h3>
+          <h3>Supplies</h3>
           <p><%= @alternative.ingredients %></p>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
-            <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
           <% end %>
           <% count_2 = 5 - count %>
-            <% count_2.times do %>
-            <i class="far fa-circle"></i>
+          <% count_2.times do %>
+          <i class="far fa-circle"></i>
           <% end %>
         </div>
       </div>
       <div class="description-right">
-        <h3><u>Description</u></h3>
-        <p><%= @alternative.description %></p>
+        <div class="description">
+          <h3>Description</h3>
+        <%= @alternative.description %></div>
       </div>
     </div>
     <div class="white-line"></div>
@@ -47,11 +54,10 @@
     <% end %>
   </div>
   <div class="reviews-card">
-  <div class="white-line"></div>
+    <div class="white-line"></div>
     <ul class="list-group">
       <p>Reviews</p>
       <% if @alternative.reviews.empty? %>
-      <p>Be the first to let a review</p>
       <% else %>
       <% @alternative.reviews.each do |review| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -62,9 +68,8 @@
         </li>
         <% end %>
       </ul>
-    <% end %>
-  </div>
-
+      <% end %>
+    </div>
     <%= render "reviews/new", alternative: @alternative, review: @review %>
   </div>
   <div class="white-line"></div>
