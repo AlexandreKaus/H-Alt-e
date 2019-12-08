@@ -63,13 +63,14 @@ p {
   font-size: 30px;
 }
 
-// .mydiy-card  {
-//   height: 80px;
-// }
-
 .mydiy-card {
   margin-left: 80px;
   margin-top: 20px;
+}
+
+.rest-diy {
+  display: flex;
+  justify-content: space-between;
 }
 
 #dash-hds {
@@ -81,19 +82,22 @@ p {
 }
 
 .myrev-card {
-  margin-left: 80px;
+  margin-left: 20px;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-// .dashoptions {
-//   margin-left: 40px;
-// }
+#title-rvw {
+  font-size: 24px !important;
+}
 
-// .card-product-infos p {
-//   text-align: center;
-// }
+.bottom-container {
+  margin-left: 40px;
+}
 
-// .card-review {
-//   justify-content : space-between;
-// }
+.rest-rev i{
+  position: relative;
+  top: 56%;
+  margin-right: 30px;
+
+}
