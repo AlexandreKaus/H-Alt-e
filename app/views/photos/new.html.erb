@@ -1,12 +1,16 @@
-<% @alternative.photos.each do |photo| %>
-<ul>
-  <li><%= photo.step %></li>
-  <li><%= photo.name %></li>
-  <li><%= photo.detail %></li>
-  <li><%= cl_image_tag photo.photo, height: 300, width: 400, crop: :fill %></li>
-</ul>
-<% end %>
-
+<div class="box-stepcard">
+  <% @alternative.photos.each do |photo| %>
+  <div class="stepcard">
+    <h3><%= photo.step %> - <%= photo.name %></h3>
+    <div class="stepcard-text">
+      <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+      <div class="ntm">
+        <p><%= photo.detail %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8 col-md-6">
     <div class="form-container">
@@ -26,4 +30,3 @@
 
 </div>
 
-<h1>test</h1>
