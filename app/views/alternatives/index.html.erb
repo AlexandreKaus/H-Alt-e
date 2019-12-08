@@ -1,9 +1,5 @@
 <!-- Essai d'implementation des checkbox -->
-<%= simple_form_for :search, url: alternatives_path, method: "GET" do |f| %>
-  <%= f.input :alimentations, label: "Restriction",  collection: $list_of_tags, as: :check_boxes %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-  <%= link_to "Reset", alternatives_path  %>
-<% end %>
+
 <!-- Essai d'implementation des checkbox -->
 
 <% @alternatives.each do |alternative| %>
