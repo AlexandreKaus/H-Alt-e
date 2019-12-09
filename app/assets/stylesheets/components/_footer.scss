@@ -9,9 +9,7 @@ z-index: -1000;
 }
 
 .right-foot p {
-
   font-size: 16px !important;
-
 }
 
 .right-foot {
@@ -22,6 +20,7 @@ z-index: -1000;
   margin-left: 80px;
   font-style: bold;
   font-size: 16px !important;
+  color:$dark-green;
 }
 
 .top-foot {
@@ -29,4 +28,8 @@ z-index: -1000;
   margin-left: 80px;
   margin-top: 30px;
   opacity: 70%;
+}
+
+.get-touch a {
+  color: $dark-green !important;
 }
