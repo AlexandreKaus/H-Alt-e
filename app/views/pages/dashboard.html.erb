@@ -7,7 +7,8 @@
     <div class="mydiy-card d-flex">
       <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
       <div class="mydiy-opt">
-        <p id="title-my"><%= alternative_select.title %></p>
+
+        <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p>
         <div class="rest-diy">
           <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
           <i class="fa fa-trash destroy_seed"></i> <p>Delete </p>
@@ -21,28 +22,42 @@
     <% end %>
   </div>
   <div class="dash-white-line"></div>
-  <div class="gen-cont">
-  <div class="bottom-container">
-    <div id="dash-hds">My reviews</div>
-    <div class="box-myrev">
-      <!-- div class="dashoptions"> -->
-      <% @reviews_select.each do |review_select| %>
-      <div class="myrev-card d-flex">
-        <img src="https://images.ricardocuisine.com/services/recipes/7446.jpg" class="dash-img" alt="dash-pic">
-        <div class="myrev-opt">
-          <p id="title-rvw"><%= review_select.alternative.title %></p>
-          <p id="my-rev"><%= review_select.comment %></p>
+  <div class="gen-cont d-flex">
+    <div class="bottom-container">
+      <div id="dash-hds">My reviews</div>
+      <div class="box-myrev d-flex">
+        <!-- div class="dashoptions"> -->
+        <% @reviews_select.each do |review_select| %>
+        <div class="myrev-card d-flex">
+          <img src="https://images.ricardocuisine.com/services/recipes/7446.jpg" class="dash-img" alt="dash-pic">
+          <div class="myrev-opt">
+            <p id="title-rvw"><%= link_to review_select.alternative.title, alternative_path(review_select) %></p>
+            <p id="my-rev"><%= review_select.comment %></p>
+          </div>
+          <div class="rest-rev ml-auto">
+            <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fa fa-trash destroy_seed"></i>
+            <% end %>
+          </div>
         </div>
-        <div class="rest-rev ml-auto">
-          <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fa fa-trash destroy_seed"></i>
-          <% end %>
-        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
-  </div>
-  <!-- <div class="vert-white-line"></div> -->
-  <div class="fav-div"></div>
+    <div class="vert-white-line"></div>
+    <div class="fav-div">
+      <div id="dash-hds">My favorites D.I.Y.s</div>
+      <div class="box-myfav">
+        <!-- div class="dashoptions"> -->
+        <% @upvotes_select.each do |upvote_select| %>
+        <div class="myrev-card d-flex">
+          <img src="https://images.ricardocuisine.com/services/recipes/7446.jpg" class="dash-img" alt="dash-pic">
+          <div class="myrev-opt">
+            <p id="title-rvw"><%= link_to upvote_select.alternative.title, alternative_path(upvote_select) %></p>
+            <p id="my-rev"><%= upvote_select.alternative.user.username %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
