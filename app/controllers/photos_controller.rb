@@ -9,10 +9,12 @@ class PhotosController < ApplicationController
     @alternative = Alternative.find(params[:alternative_id])
     @photo = Photo.new(photo_params)
     @photo.alternative = @alternative
-    if @photo.save
+    if params[:commit] == "create" && @photo.save
       redirect_to new_alternative_photo_path(@alternative)
+    elsif @photo.save
+      redirect_to alternative_path(@alternative.id)
     else
-      raise
+      render :new
     end
   end
 

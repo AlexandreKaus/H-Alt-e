@@ -11,9 +11,35 @@ puts 'Clean database...'
 
 User.destroy_all
 
-# ActsAsTaggableOn::Tag.create(name: "TagName")
-#pluck just les name
+# Seed pour produits
 
+puts 'Creating 1 fake product user...'
+1.times do
+  user = User.new(
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: 'password',
+  )
+  user.save!
+
+  1.times do
+    alternative = Alternative.new(
+    title:    Faker::Food.dish,
+    description: Faker::Food.description,
+    ingredients: "50€",
+    difficulty: "22",
+    prep_time: Time.now,
+    alimentation_list: $list_of_tags.sample,
+    diy: false,
+    pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
+    user: user,
+    )
+    alternative.save!
+
+  end
+end
+
+# Seed pour DIYs
 
 puts 'Creating 10 fake user...'
 5.times do

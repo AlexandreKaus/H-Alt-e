@@ -3,19 +3,21 @@ class AlternativesController < ApplicationController
 
   def index
     if params[:query].present?
-      if params[:search].present?
-        @alternatives = Alternative.search_alternative(params[:search][:alimentations]).concat(params[:query]).flatten.reject(&:blank?)
+      if params[:tag].present?
+        @alternatives = Alternative.search_alternative(params[:tag]).search_alternative(params[:query])
       else
         @alternatives = Alternative.search_alternative(params[:query])
       end
-    elsif params[:search].present?
-      @alternatives = Alternative.search_alternative(params[:search][:alimentations])
+    elsif params[:tag].present?
+      @alternatives = Alternative.search_alternative(params[:tag])
     else
+
       @alternatives = Alternative.all
     end
   end
 
   def show
+
     @review = Review.new
     @upvote_count = @alternative.upvotes.where(downvote: false).count
     @downvote = @alternative.upvotes.where(downvote: true).count

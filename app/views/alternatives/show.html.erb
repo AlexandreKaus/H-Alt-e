@@ -1,3 +1,7 @@
+<% if @alternative.diy == false %>
+  <%= @alternative.title %>TEST OK</h1>
+  <h1><%= @alternative.ingredients %></h1>
+<% else %>
 <div class="container">
   <div class="about-container">
     <div id="title-vote">
@@ -23,11 +27,11 @@
           <h4>Difficulty</h4>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
-          <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
           <% end %>
           <% count_2 = 5 - count %>
           <% count_2.times do %>
-          <i class="far fa-circle"></i>
+            <i class="far fa-circle"></i>
           <% end %>
           <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           <div class="supplies">
@@ -45,9 +49,11 @@
     <div class="white-line"></div>
   </div>
   <div class="box-stepcard">
+    <% step = 1 %>
     <% @alternative.photos.each do |photo| %>
     <div class="stepcard">
-      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <h3><%= step %> - <%= photo.name %></h3>
+      <% step +=1 %>
       <div class="stepcard-text">
         <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
         <div class="ntm">
@@ -78,3 +84,4 @@
   </div>
   <div class="white-line"></div>
 </div>
+<% end %>
