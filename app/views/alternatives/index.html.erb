@@ -5,7 +5,7 @@
 
   <% check_box_tag "tag", tag %>
 <label class="fancy-checkbox">
-    <input type="checkbox" name="tag" value="<%= tag %>"/>
+    <input type="checkbox" name="tag[]" value="<%= tag %>" <%= (params[:tag] || [] ).include?(tag) ? "checked" : "" %>/>
     <i class="far fa-circle unchecked"></i>
     <i class="fas fa-circle checked"></i>
 </label>
