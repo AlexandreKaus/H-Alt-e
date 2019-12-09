@@ -25,11 +25,11 @@
           <h3>Difficulty</h3>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
-          <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
           <% end %>
           <% count_2 = 5 - count %>
           <% count_2.times do %>
-          <i class="far fa-circle"></i>
+            <i class="far fa-circle"></i>
           <% end %>
         </div>
       </div>
@@ -42,9 +42,11 @@
     <div class="white-line"></div>
   </div>
   <div class="box-stepcard">
+    <% step = 1 %>
     <% @alternative.photos.each do |photo| %>
     <div class="stepcard">
-      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <h3><%= step %> - <%= photo.name %></h3>
+      <% step +=1 %>
       <div class="stepcard-text">
         <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
         <div class="ntm">
