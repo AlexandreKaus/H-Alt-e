@@ -40,6 +40,7 @@
 
 .form-review {
   width: 80%;
+  margin-top:20px;
 }
 
 #new_review > div > label {
@@ -102,4 +103,7 @@ h4 {
 .stepcard-text{
   display: flex;
   margin-right: 10px;
+}
+.reviews {
+  text-align:center;
 }
