@@ -1,10 +1,12 @@
+<div class="restriction">
 <!-- Essai d'implementation des checkbox -->
 <%= simple_form_for :search, url: alternatives_path, method: "GET" do |f| %>
-  <%= f.input :alimentations, label: "Restrictions :",  collection: $list_of_tags, as: :check_boxes %>
+  <%= f.input :alimentations, label: "Filter :", collection: $list_of_tags, as: :check_boxes %>
   <%= text_field_tag :query %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= f.submit "Search", class: "btn" %>
   <%= link_to "Reset", alternatives_path  %>
 <% end %>
+</div>
 <!-- Essai d'implementation des checkbox -->
 <% @alternatives.each do |alternative| %>
 <div class="container">
@@ -26,7 +28,7 @@
         <% when count = 1 %>
           <%= "Very easy" %>
         <% when count = 2 %>
-          <%= "easy" %>
+          <%= "Easy" %>
         <% when count = 3 %>
           <%= "Medium" %>
         <% when count = 4 %>
@@ -39,10 +41,10 @@
     <div class="separator"></div>
     <div class="card-alternatives-right">
       <div class="property">D.I.Y. </div>
-      <p> <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min") %></p>
+      <p> <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min.") %></p>
       <div class="d-flex">
         <% alternative.alimentation_list.each do |alim| %>
-        <div class="tag"><i class="fas fa-tags"> <%= alim %></i></div>
+        <div class="tag"><i class="fas fa-tags"><span class="tagged"> <%= alim %>&nbsp;</span></i></div>
         <% end %>
       </div>
     </div>

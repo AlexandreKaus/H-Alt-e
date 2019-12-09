@@ -1,0 +1,18 @@
+.restriction {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  margin-left: 20px;
+  text-align:left;
+  float: right;
+  width: 150px;
+  background-color: $dark-green;
+  padding: 5px;
+  }
+ body > div > div.restriction > form > fieldset > legend {
+  font-family: "Frank Ruhl Libre", "Georgia", "serif"!important;
+  font-size: 22px;
+}
+body > div > div.restriction > form > fieldset > legend > abbr {
+  display:none;
+}
