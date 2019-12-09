@@ -20,7 +20,9 @@
 }
 
 .ingredients {
+  margin-top:0px;
   margin-left: 40px;
+  line-height: 0px;
 }
 
 .about-container h1 {
@@ -71,12 +73,32 @@ width: 310px
 }
 .ntm{
   margin-left: 0;
+
 }
 .btn{
   padding:0;
 }
 
 #review_comment {
-  width: 70%;
-
+  width: 85%;
+}
+// .dif-circle{
+//   font-size: 14px;
+// }
+.fa-circle {
+  font-size: 12px;
+}
+.supplies {
+  margin-top:12px;
+  line-height: 14px;
+}
+h4 {
+  font-size: 22px;
+}
+.time{
+  margin-top:12px;
+}
+.stepcard-text{
+  display: flex;
+  margin-right: 10px;
 }
