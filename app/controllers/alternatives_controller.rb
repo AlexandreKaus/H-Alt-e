@@ -4,7 +4,7 @@ class AlternativesController < ApplicationController
   def index
     if params[:query].present?
       if params[:tag].present?
-        @alternatives = Alternative.search_alternative(params[:tag]).search_alternative(params[:query])
+        @alternatives = Alternative.search_alternative(params[:query]).tagged_with(params[:tag], :any => true)
       else
         @alternatives = Alternative.search_alternative(params[:query])
       end

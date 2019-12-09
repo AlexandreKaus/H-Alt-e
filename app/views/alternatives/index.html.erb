@@ -2,7 +2,12 @@
 <!-- Essai d'implementation des checkbox -->
 <%= form_tag alternatives_path, method: "GET" do |f| %>
   <% $list_of_tags.each do |tag| %>
-  <%= check_box_tag "tag", tag %>
+  <% if tag == params[:tag] %>
+  <% tagged = true %>
+  <% else %>
+  <% tagged = false %>
+  <% end %>
+  <%= check_box_tag "tag[foo][]", tag, tagged %>
   <%= label_tag tag %>
   <% end %>
   <%= hidden_field_tag :query, params[:query]  %>
@@ -13,7 +18,7 @@
 <!-- Essai d'implementation des checkbox -->
 <% @alternatives.each do |alternative| %>
 <div class="container">
-  <div class="card-alternatives-container">
+  <div class="card-alternatives-container ">
     <div class="index-img">
       <%= cl_image_tag  alternative.pic%>
     </div>
