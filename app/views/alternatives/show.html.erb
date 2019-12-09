@@ -1,3 +1,7 @@
+<% if @alternative.diy == false %>
+  <%= @alternative.title %>TEST OK</h1>
+  <h1><%= @alternative.ingredients %></h1>
+<% else %>
 <div class="container">
   <div class="about-container">
     <div id="title-vote">
@@ -75,3 +79,4 @@
   </div>
   <div class="white-line"></div>
 </div>
+<% end %>
