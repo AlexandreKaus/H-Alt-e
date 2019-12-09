@@ -2,16 +2,18 @@
 <!-- Essai d'implementation des checkbox -->
 <%= form_tag alternatives_path, method: "GET" do |f| %>
   <% $list_of_tags.each do |tag| %>
-  <% if tag == params[:tag] %>
-  <% tagged = true %>
-  <% else %>
-  <% tagged = false %>
-  <% end %>
-  <%= check_box_tag "tag[foo][]", tag, tagged %>
-  <%= label_tag tag %>
+
+  <% check_box_tag "tag", tag %>
+<label class="fancy-checkbox">
+    <input type="checkbox" name="tag" value="<%= tag %>"/>
+    <i class="far fa-circle unchecked"></i>
+    <i class="fas fa-circle checked"></i>
+</label>
+
+  <%= label_tag tag %> <br>
   <% end %>
   <%= hidden_field_tag :query, params[:query]  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "btn" %>
   <%= link_to "Reset", alternatives_path  %>
 <% end %>
 </div>
@@ -24,35 +26,30 @@
     </div>
     <div class="card-alternatives-left">
       <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
-      <% count = alternative.difficulty.to_i %>
+
+      <p> <%= alternative.description %> </p>
+    </div>
+    <div class="separator"></div>
+    <div class="card-alternatives-right">
+      <div class="property">  <h4> By <%= alternative.user.username %> </h4>D.I.Y.&nbsp;&nbsp;
+      <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min.") %>&nbsp;&nbsp;
+        Difficulty
+            <% count = alternative.difficulty.to_i %>
       <% count.times do %>
         <i class="fas fa-circle"></i>
       <% end %>
       <% count_2 = 5 - count %>
       <% count_2.times do %>
         <i class="far fa-circle"></i>
-      <% end %>
-      <% case count %>
-        <% when count = 1 %>
-          <%= "Very easy" %>
-        <% when count = 2 %>
-          <%= "Easy" %>
-        <% when count = 3 %>
-          <%= "Medium" %>
-        <% when count = 4 %>
-          <%= "Challenging" %>
-        <% when count = 5 %>
-          <%= "Hard" %>
-      <% end %>
-      <p> <%= alternative.description %> </p>
-    </div>
-    <div class="separator"></div>
-    <div class="card-alternatives-right">
-      <div class="property">D.I.Y. </div>
-      <p> <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min.") %></p>
+      <% end %></div>
       <div class="d-flex">
         <% alternative.alimentation_list.each do |alim| %>
         <div class="tag"><i class="fas fa-tags"><span class="tagged"> <%= alim %>&nbsp;</span></i></div>
+
+<!-- Implement upvotes -->
+
+<!-- - -->
+
         <% end %>
       </div>
     </div>

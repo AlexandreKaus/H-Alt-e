@@ -16,6 +16,13 @@
   margin-left: 10px;
 }
 
+.navbar-lewagon .navbar-brand:after{
+    content:'H-Alt-e';
+}
+.navbar-lewagon .navbar-brand:hover:after{
+    content:'H—Alt—e';
+}
+
 .navbar-light .navbar-nav .nav-link {
   margin-top: 10px;
   color: $white;
@@ -61,6 +68,8 @@ a {
   height: 12px;
 }
 .searchbar {
+  position: absolute;
+  left: 35%;
   display:flex;
   justify-content:space-between;
   width: 300px;
