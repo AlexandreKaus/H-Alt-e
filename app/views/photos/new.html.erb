@@ -21,8 +21,8 @@
         <%= f.input :detail %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-        <%= link_to 'Done!', alternative_path(@alternative.id), class: 'btn btn-primary'%>
+        <%= f.submit "create", class: 'btn btn-primary' %>
+        <%= f.submit "Done", class: 'btn btn-primary' %>
       <% end %>
       </div>
     </div>
