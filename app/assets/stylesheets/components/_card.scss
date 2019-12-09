@@ -64,28 +64,34 @@ p {
 }
 
 .mydiy-card {
-  margin-left: 80px;
   margin-top: 20px;
 }
 
 .rest-diy {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 #dash-hds {
+  font-family: $headers-font !important;
   text-align: left;
   font-size: 40px;
-  margin-left: 80px;
-  margin-top: 80px;
-
+  margin-top: 60px;
 }
 
 .myrev-card {
-  margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  justify-content: space-between;
+  justify-content: align-items;
+}
+
+.myfav-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: align-items;
+  position: relative;
+  right: 80px;
 }
 
 #title-rvw {
@@ -93,20 +99,17 @@ p {
 }
 
 .bottom-container {
-  margin-left: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.rest-rev i{
-  position: relative;
-  top: 56%;
-  margin-right: 30px;
-}
 
 .card-alternatives-container {
   display: flex;
   justify-content: space-between;
   width: 920px;
 }
+
 .property {
   font-family: "Noto Sans", "Helvetica", "sans-serif";
   font-size: 14px;
@@ -130,8 +133,4 @@ p {
   margin: auto;
   border-right: 1px solid;
   height: 20px;
-}
-
-.box-myrev {
-  justify-content: space-between;
 }
