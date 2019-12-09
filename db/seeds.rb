@@ -26,8 +26,8 @@ puts 'Creating 1 fake product user...'
     alternative = Alternative.new(
     title:    Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: "50€",
-    difficulty: "22",
+    ingredients: "50 €",
+    difficulty: "0",
     prep_time: Time.now,
     alimentation_list: $list_of_tags.sample,
     diy: false,
