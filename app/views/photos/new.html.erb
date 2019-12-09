@@ -1,13 +1,16 @@
-<div class="box-stepcard">
-  <% @alternative.photos.each do |photo| %>
-  <div class="stepcard">
-    <h3><%= photo.step %> - <%= photo.name %></h3>
-    <div class="stepcard-text">
-      <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
-      <div class="ntm">
-        <p><%= photo.detail %></p>
+<div class="container">
+  <div class="box-stepcard">
+    <% @alternative.photos.each do |photo| %>
+    <div class="stepcard">
+      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <div class="stepcard-text">
+        <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+        <div class="ntm">
+          <p><%= photo.detail %></p>
+        </div>
       </div>
     </div>
+    <% end %>
   </div>
   <% end %>
 </div>
@@ -21,12 +24,10 @@
         <%= f.input :detail %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-        <%= link_to 'Done!', alternative_path(@alternative.id), class: 'btn btn-primary'%>
+        <%= f.submit "create", class: 'btn btn-primary' %>
+        <%= f.submit "Done", class: 'btn btn-primary' %>  
       <% end %>
       </div>
     </div>
   </div>
-
 </div>
-

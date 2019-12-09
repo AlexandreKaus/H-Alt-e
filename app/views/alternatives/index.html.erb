@@ -1,35 +1,58 @@
 <!-- Essai d'implementation des checkbox -->
-
+<%= form_tag alternatives_path, method: "GET" do |f| %>
+  <% $list_of_tags.each do |tag| %>
+  <%= check_box_tag "tag", tag %>
+  <%= label_tag tag %>
+  <% end %>
+  <%= hidden_field_tag :query, params[:query]  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= link_to "Reset", alternatives_path  %>
+<% end %>
 <!-- Essai d'implementation des checkbox -->
-
 <% @alternatives.each do |alternative| %>
-
 <div class="container">
   <div class="card-alternatives-container">
-      <div class="index-img">
-         <%= cl_image_tag  "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"%>
-      <!-- alternative.photos.first.try(:photo) || -->
-      </div>
-      <div class="card-alternatives-left">
-<h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
-<% count = alternative.difficulty.to_i %>
-          <% count.times do %>
-            <i class="fas fa-circle"></i>
-          <% end %>
-          <% count_2 = 5 - count %>
-            <% count_2.times do %>
-            <i class="far fa-circle"></i>
-          <% end %>
-<p> <%= alternative.description %> </p>
+    <div class="index-img">
+      <%= cl_image_tag  alternative.pic%>
     </div>
-      <div class="separator"></div>
+    <div class="card-alternatives-left">
+      <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
+      <% count = alternative.difficulty.to_i %>
+      <% count.times do %>
+        <i class="fas fa-circle"></i>
+      <% end %>
+      <% count_2 = 5 - count %>
+      <% count_2.times do %>
+        <i class="far fa-circle"></i>
+      <% end %>
+      <% case count %>
+        <% when count = 1 %>
+          <%= "Very easy" %>
+        <% when count = 2 %>
+          <%= "easy" %>
+        <% when count = 3 %>
+          <%= "Medium" %>
+        <% when count = 4 %>
+          <%= "Challenging" %>
+        <% when count = 5 %>
+          <%= "Hard" %>
+      <% end %>
+      <p> <%= alternative.description %> </p>
+    </div>
+    <div class="separator"></div>
     <div class="card-alternatives-right">
-    <div class="property">D.I.Y. </div>
-<p> <i class="far fa-clock"></i> <%= alternative.prep_time.strftime("%H:%M:%S") %> min.</p>
+      <div class="property">D.I.Y. </div>
+      <p> <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min") %></p>
+      <div class="d-flex">
+        <% alternative.alimentation_list.each do |alim| %>
+        <div class="tag"><i class="fas fa-tags"> <%= alim %></i></div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
 <div class="white-line"></div>
 <% end %>
-
 <script type="text/javascript" src="dist/js/jquery-1.10.2.js"></script>
+
+
