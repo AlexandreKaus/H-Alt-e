@@ -1,4 +1,23 @@
 .btn {
-  color: #fff;
-  background-color: #f46c6e;
+  color: white;
+  background-color: $dark-green;
+  // padding:0;
+  margin: auto;
+  // border: 2px solid white;
+}
+
+input.btn.btn-primary2 {
+margin-left: auto;
+margin-right: auto;
+// // padding: 4px;
+// // text-align: center !important;
+// // width: 30%;
+// border: 2px solid white;
+}
+
+
+.container .form-actions:hover {
+  // border: 2px solid white;
+  // width: 20%;
+  text-decoration: underline;
 }

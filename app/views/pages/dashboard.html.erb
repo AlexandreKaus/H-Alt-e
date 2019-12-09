@@ -9,15 +9,17 @@
       <div class="mydiy-opt">
 
         <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p>
-        <div class="rest-diy">
-          <div class="delete d-flex">
+        <div class="rest-diy ">
+          <div class="delete">
           <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
           <i class="fa fa-trash-alt destroy_seed"></i> <p>Delete </p>
-          <% end %></div>
+          <% end %>
+          </div>
           <div class="edit">
           <%= link_to edit_alternative_path(alternative_select) do %>
           <i class="fa fa-edit edit_seed"></i> <p>Edit</p>
-          <% end %></div>
+          <% end %>
+          </div>
         </div>
       </div>
     </div>
