@@ -1,11 +1,12 @@
 <% if @alternative.diy == false %>
-  <%= @alternative.title %>TEST OK</h1>
-  <h1><%= @alternative.ingredients %></h1>
+<%= @alternative.title %>TEST OK</h1>
+<h1><%= @alternative.ingredients %></h1>
 <% else %>
 <div class="container">
   <div class="about-container">
     <div id="title-vote">
       <div class="title"><h3> <%= @alternative.title %></h3>
+      <h4> By <%= @alternative.user.username %> </h4>
       </div>
     </div>
     <div class="item-infos d-flex">
@@ -27,16 +28,16 @@
           <h4>Difficulty</h4>
           <% count = @alternative.difficulty.to_i %>
           <% count.times do %>
-            <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
           <% end %>
           <% count_2 = 5 - count %>
           <% count_2.times do %>
-            <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
           <% end %>
           <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           <div class="supplies">
-          <h4>Supplies</h4>
-          <p>- <%= @alternative.ingredients %></p>
+            <h4>Supplies</h4>
+            <p>- <%= @alternative.ingredients %></p>
           </div>
         </div>
       </div>
