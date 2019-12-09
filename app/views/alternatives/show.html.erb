@@ -67,15 +67,14 @@
   <div class="reviews-card">
     <div class="white-line"></div>
     <ul class="list-group">
-      <h2>Reviews</h2>
+     <span class="reviews"> <h2>Reviews</h2></span>
       <% if @alternative.reviews.empty? %>
       <% else %>
       <% @alternative.reviews.each do |review| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">
-          <h3><u><%= review.user.username %></u></h3>
+          <h3><u><%= review.user.username %></u></h3>Wrote on <%= review.created_at.strftime('%B %e, %Y') %>
           <p><i><%= review.comment %></i></p>
-          le :<%= review.created_at.strftime("%d/%m/%Y") %>
         </li>
         <% end %>
       </ul>
