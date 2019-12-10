@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+
   def create
     @alternative = Alternative.find(params[:alternative_id])
     @review = Review.new(review_params)
@@ -10,6 +11,12 @@ class ReviewsController < ApplicationController
       redirect_to alternative_path(@alternative)
     end
   end
+
+  # def destroy
+  #   @review = Review.find(params[:id])
+  #   @review.alternative.destroy
+  #   redirect_to dashboard_path
+  # end
 
   private
 

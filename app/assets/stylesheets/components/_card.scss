@@ -42,8 +42,14 @@ p {
   margin-left: 40px;
 }
 
+.myrev-opt-lft {
+  margin-left: 40px;
+  width: 350px;
+}
+
 .myrev-opt {
   margin-left: 40px;
+  width: 350px;
 }
 
 .myrev-opt p {
@@ -82,7 +88,7 @@ p {
 
 #dash-hds {
   font-family: $headers-font !important;
-  text-align: left;
+  text-align: center;
   font-size: 40px;
   margin-top: 60px;
 }
@@ -98,7 +104,7 @@ p {
   margin-bottom: 20px;
   justify-content: align-items;
   position: relative;
-  right: 80px;
+  // right: 80px;
 }
 
 #title-rvw {

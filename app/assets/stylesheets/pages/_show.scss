@@ -65,13 +65,19 @@
   text-align:left;
 }
 
+.title u {
+  font-size: 18px;
+  text-decoration: none;
+}
+
 #title-vote {
   display:flex;
   justify-content: end;
 }
 
 #title-vote > div{
-width: 310px
+// width: 310px
+  margin-bottom: 30px;
 }
 
 .first-comment {
