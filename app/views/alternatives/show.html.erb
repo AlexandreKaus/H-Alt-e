@@ -27,19 +27,12 @@
         <div class="diff-time d-flex">
         </div>
         <div class="ingredients">
-          <h4>Difficulty</h4>
-          <% count = @alternative.difficulty.to_i %>
-          <% count.times do %>
-          <i class="fas fa-circle"></i>
-          <% end %>
-          <% count_2 = 5 - count %>
-          <% count_2.times do %>
-          <i class="far fa-circle"></i>
-          <% end %>
+<!--           <h4>Difficulty</h4>
+ -->          <%= @alternative.difficulty %>
           <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           <div class="supplies">
             <h4>Supplies</h4>
-            <p>- <%= @alternative.ingredients %></p>
+            <p><%= @alternative.ingredients %></p>
           </div>
         </div>
       </div>

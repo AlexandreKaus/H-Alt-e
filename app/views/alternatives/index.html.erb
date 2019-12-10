@@ -35,15 +35,9 @@
     <div class="card-alternatives-right">
       <div class="property">  <h4> By <%= alternative.user.username %> </h4>D.I.Y.&nbsp;&nbsp;
       <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min.") %>&nbsp;&nbsp;
-        Difficulty
-            <% count = alternative.difficulty.to_i %>
-      <% count.times do %>
-        <i class="fas fa-circle"></i>
-      <% end %>
-      <% count_2 = 5 - count %>
-      <% count_2.times do %>
-        <i class="far fa-circle"></i>
-      <% end %></div>
+
+            <%= alternative.difficulty %>
+            </div>
       <div class="d-flex">
         <% alternative.alimentation_list.each do |alim| %>
         <div class="tag"><i class="fas fa-tags"><span class="tagged"> <%= alim %>&nbsp;</span></i></div>
