@@ -9,7 +9,7 @@ class Alternative < ApplicationRecord
   validates :ingredients, presence: true
   validates :difficulty, presence: true
   validates :prep_time, presence: true
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :pic, PhotoUploader
 
   acts_as_taggable
 
