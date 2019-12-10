@@ -4,6 +4,7 @@ class CreateAlternatives < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.text :ingredients, array: true, default: []
+      t.text :alt_at, array: true, default: []
       t.float :difficulty
       t.time :prep_time
       t.boolean :diy, default: true

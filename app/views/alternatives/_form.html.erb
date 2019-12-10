@@ -11,12 +11,12 @@
         <%= f.input :title %>
         <%= f.input :description %>
         <p></p>
-        <%= f.input :ingredients, as: :text %>
-        <input type="hidden" id="test_test" name="empty" value="1" />
+        <%= f.input :ingredients%>
         <div id="alternative_ingredients_list"></div>
-        <h2></h2>
         <%= f.input :difficulty %>
         <%= f.input :prep_time %>
+        <%= f.input :alt_at %> <p></p>
+        <div id="alternative_ingredients_list"></div>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
         <%= f.input :alimentation_list, label: "Alimentation",  collection: $list_of_tags, as: :check_boxes %>

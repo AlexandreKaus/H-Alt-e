@@ -11,12 +11,10 @@ for (const check of checkBoxes) {
 
 
 // TESTING OF EVENTLISTENER TO ADD
-var addbutton = document.querySelector(".adding_button");
 var p = document.querySelector("p");
 var text = document.getElementById("alternative_ingredients")
 var my_list = document.getElementById("alternative_ingredients_list")
-var tags = document.querySelectorAll(".my_tag");
-var test = document.getElementById("test_test");
+
  text.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
   p.insertAdjacentHTML("beforeend", "<div class='my_tag'>" + text.value + "</div>");
@@ -29,7 +27,9 @@ var test = document.getElementById("test_test");
 
 
 
-// var forms = document.querySelectorAll("form");
+
+
+// var forms = document.querySelectorAll("form");[]
 
 // for (const form of forms) {
 //   form.addEventListener ('submit', function(){

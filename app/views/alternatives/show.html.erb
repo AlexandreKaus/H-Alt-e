@@ -37,7 +37,13 @@
           <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           <div class="supplies">
             <h4>Supplies</h4>
-            <p>- <%= @alternative.ingredients %></p>
+            <% @alternative.ingredients.each do |ingredient| %>
+            <% if ingredient.index("\r").nil? %>
+              <p>- <%= ingredient %></p>
+            <% else %>
+              <p>- <%=  ingredient[2...ingredient.length] %></p>
+            <% end %>
+            <% end %>
           </div>
         </div>
       </div>

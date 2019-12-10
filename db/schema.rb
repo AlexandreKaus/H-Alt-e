@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2019_12_06_172750) do
   create_table "alternatives", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.text "ingredients"
+    t.text "ingredients", default: [], array: true
+    t.text "alt_at", default: [], array: true
     t.float "difficulty"
     t.time "prep_time"
     t.boolean "diy", default: true
