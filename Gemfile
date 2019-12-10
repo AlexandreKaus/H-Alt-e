@@ -20,6 +20,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search', '~> 2.3.0'
+gem 'enum_help'
 gem 'nokogiri'
 
 group :development do

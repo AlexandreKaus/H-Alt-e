@@ -13,8 +13,8 @@
         <%= f.input :ingredients%>
         <div id="ingredients_placeholder"></div>
         <div id="alternative_ingredients_list"></div>
-        <%= f.input :difficulty %>
-        <%= f.input :prep_time %>
+        <%= f.input :difficulty, collection: Alternative.difficulties %>
+        <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
         <%= f.input :alt_at %> <p></p>
         <div id="alt_placeholder"></div>
         <div id="alternative_alt_list"></div>

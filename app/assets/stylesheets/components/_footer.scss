@@ -1,11 +1,11 @@
 .footer {
 background-color: white;
 color: $dark-green;
-height: 40px;
+height: 60px;
 position: sticky;
 bottom: 0;
 width:100%;
-z-index: -1000;
+z-index: -1;
 }
 
 .right-foot p {
@@ -17,6 +17,7 @@ z-index: -1000;
 }
 
 .get-touch {
+  margin-top:50px;
   margin-left: 80px;
   font-style: bold;
   font-size: 16px !important;
@@ -32,4 +33,5 @@ z-index: -1000;
 
 .get-touch a {
   color: $dark-green !important;
+  padding-bottom: 40px;
 }

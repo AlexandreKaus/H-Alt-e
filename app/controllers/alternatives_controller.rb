@@ -28,6 +28,7 @@ class AlternativesController < ApplicationController
   end
 
   def create
+    params[:alternative][:difficulty] = params[:alternative][:difficulty].to_i
     @alternative = Alternative.new(alternative_params)
     @alternative.user = current_user
     @alternative.ingredients = params[:ingredients_list]

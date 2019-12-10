@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>H-Alt-e</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <!-- Include base CSS (optional) -->
 
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
@@ -23,8 +24,7 @@
       <p class="alert"><%= alert %></p>
     </div>
     <%= render 'shared/footer' %>
-  </body>
-  <svg class="defs-only">
+     <svg class="defs-only" style="display:none;">
     <filter id="monochrome" color-interpolation-filters="sRGB"
     x="0" y="0" height="100%" width="100%">
     <feColorMatrix type="matrix"
@@ -34,4 +34,6 @@
     1 0 0 0 0" />
     </filter>
   </svg>
+  </body>
+
 </html>
