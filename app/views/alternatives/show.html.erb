@@ -48,6 +48,20 @@
               <p>- <%=  ingredient[2...ingredient.length] %></p>
             <% end %>
             <% end %>
+
+          </div>
+
+          <div class="supplies">
+
+            <h4>Alternative of </h4>
+            <% @alternative.alt_at.each do |alt| %>
+            <% if alt.index("\r").nil? %>
+              <p><%= alt %></p>
+            <% else %>
+              <p><%=  alt[2...alt.length] %></p>
+            <% end %>
+            <% end %>
+
           </div>
         </div>
       </div>
