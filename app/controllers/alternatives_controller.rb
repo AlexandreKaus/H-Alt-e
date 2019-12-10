@@ -30,6 +30,7 @@ class AlternativesController < ApplicationController
     @alternative = Alternative.new(alternative_params)
     @alternative.user = current_user
     @alternative.ingredients = params[:ingredients_list]
+    @alternative.alt_at = params[:alt_list]
     if @alternative.save
       redirect_to new_alternative_photo_path(@alternative)
     else
@@ -42,6 +43,8 @@ class AlternativesController < ApplicationController
 
   def update
     @alternative.update(alternative_params)
+    @alternative.ingredients = params[:ingredients_list]
+    @alternative.alt_at = params[:alt_list]
     if @alternative.save
       redirect_to alternative_path(@alternative)
     else
