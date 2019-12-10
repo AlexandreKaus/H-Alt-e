@@ -24,7 +24,6 @@ class Alternative < ApplicationRecord
                      "Hard" => 5
                    }
 
-
   include PgSearch::Model
   pg_search_scope :search_alternative,
     against: [:title, :description],

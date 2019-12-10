@@ -1,3 +1,4 @@
+
 class AlternativesController < ApplicationController
   before_action :set_alternatives, only: %i[show destroy edit update]
 
@@ -5,7 +6,6 @@ class AlternativesController < ApplicationController
     if params[:query].present?
       if params[:tag].present?
         alternatives = Alternative.search_alternative(params[:query]).tagged_with(params[:tag], :any => true)
-
       else
         alternatives = Alternative.search_alternative(params[:query])
       end
@@ -18,7 +18,6 @@ class AlternativesController < ApplicationController
   end
 
   def show
-
     @review = Review.new
     @upvote_count = @alternative.upvotes.where(downvote: false).count
     @downvote = @alternative.upvotes.where(downvote: true).count
@@ -32,6 +31,8 @@ class AlternativesController < ApplicationController
     params[:alternative][:difficulty] = params[:alternative][:difficulty].to_i
     @alternative = Alternative.new(alternative_params)
     @alternative.user = current_user
+    @alternative.ingredients = params[:ingredients_list]
+    @alternative.alt_at = params[:alt_list]
     if @alternative.save
       redirect_to new_alternative_photo_path(@alternative)
     else
@@ -44,6 +45,8 @@ class AlternativesController < ApplicationController
 
   def update
     @alternative.update(alternative_params)
+    @alternative.ingredients = params[:ingredients_list]
+    @alternative.alt_at = params[:alt_list]
     if @alternative.save
       redirect_to alternative_path(@alternative)
     else
@@ -66,3 +69,5 @@ class AlternativesController < ApplicationController
     params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, :pic, alimentation_list: [])
   end
 end
+
+

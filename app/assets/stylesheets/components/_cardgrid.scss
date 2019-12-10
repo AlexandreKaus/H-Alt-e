@@ -43,9 +43,9 @@
   width: 100%;
 }
 
-.reviews-card .white-line {
-  width: 100%;
-}
+// .reviews-card .white-line {
+//   width: 100%;
+// }
 
 .item-infos .description-right {
   text-align: justify;
@@ -53,8 +53,8 @@
 
 .badge {
   border-style: none;
-  background-color: white;
-  color: black;
+  background-color: $dark-green;
+  color: white;
 }
 
 .badge p {

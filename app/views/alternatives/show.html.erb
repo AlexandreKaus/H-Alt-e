@@ -7,15 +7,15 @@
 <div class="container">
   <div class="about-container">
     <div id="title-vote">
-      <div class="title"><h3> <%= @alternative.title %></h3>
-      <h4> By <%= @alternative.user.username %> </h4>
+      <div class="title"> <%= @alternative.title %> <u> by <%= @alternative.user.username %> </u>
       </div>
     </div>
     <div class="item-infos d-flex">
       <div class="group-item">
         <div class="left-infos">
+
           <%= cl_image_tag @alternative.pic, crop: :fill, class: "step-img" %>
-          <div class="tag"><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></div>
+
           <div class="upvotes">
             <div class="good"><a href="<%= alternative_upvote_path(@alternative.id) %>" class=""><span class="fas fa-plus"></span> Good alternative&nbsp;</a></div>
             <div class="bad"><a href="<%= alternative_downvote_path(@alternative.id) %>" class=""><span class="fas fa-minus"></span> Bad alternative&nbsp;</a></div>
@@ -23,16 +23,44 @@
               <i class="fas fa-leaf"></i> <%= @upvote_count - @downvote %>
             </div>
           </div>
+          <div class="tag"><i class="fas fa-tags"></i> <%= @alternative.alimentation_list %></div>
         </div>
         <div class="diff-time d-flex">
         </div>
         <div class="ingredients">
-<!--           <h4>Difficulty</h4>
- -->          <%= @alternative.difficulty %>
-          <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
+          <div class="diff d-flex"><h4>Difficulty</h4>
+          <% count = @alternative.difficulty.to_i %>
+          <% count.times do %>
+          <i class="fas fa-circle"></i>
+          <% end %>
+          <% count_2 = 5 - count %>
+          <% count_2.times do %>
+          <i class="far fa-circle"></i>
+          <% end %>
+          <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M.min") %></p></div>
+          </div>
           <div class="supplies">
             <h4>Supplies</h4>
-            <p><%= @alternative.ingredients %></p>
+            <% @alternative.ingredients.each do |ingredient| %>
+            <% if ingredient.index("\r").nil? %>
+              <p>- <%= ingredient %></p>
+            <% else %>
+              <p>- <%=  ingredient[2...ingredient.length] %></p>
+            <% end %>
+            <% end %>
+
+          </div>
+
+          <div class="supplies">
+
+            <h4>Alternative of </h4>
+            <% @alternative.alt_at.each do |alt| %>
+            <% if alt.index("\r").nil? %>
+              <p><%= alt %></p>
+            <% else %>
+              <p><%=  alt[2...alt.length] %></p>
+            <% end %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -66,9 +94,9 @@
       <% if @alternative.reviews.empty? %>
       <% else %>
       <% @alternative.reviews.each do |review| %>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <li id="rev-card" class="list-group-item d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">
-          <h3><u><%= review.user.username %></u></h3>Wrote on <%= review.created_at.strftime('%B %e, %Y') %>
+          <div class="inf-rev d-flex"><h3><%= review.user.username %>  <u> on <%= review.created_at.strftime('%B %e, %Y') %> </u></h3></div>
           <p><i><%= review.comment %></i></p>
         </li>
         <% end %>

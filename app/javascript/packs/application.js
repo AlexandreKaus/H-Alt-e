@@ -1,5 +1,55 @@
 import "bootstrap";
 
+// AUTO-UPDATE FILTER
+var checkBoxes = document.querySelectorAll(".checkbox_filter");
+var field = document.querySelector(".toto");
+
+for (const check of checkBoxes) {
+  check.addEventListener ('change', function(){
+    field.submit()
+  })
+};
+
+
+// ADDING INGREDIENTS
+var p = document.getElementById("ingredients_placeholder");
+var text = document.getElementById("alternative_ingredients");
+var my_list = document.getElementById("alternative_ingredients_list");
+
+ text.addEventListener ('keypress', (event) => {
+  if (event.keyCode === 13) {
+  p.insertAdjacentHTML("afterend", "<div class='my_tag'>" + text.value + "</div>");
+  my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + text.value + "' />");
+  text.value = "";
+}
+})
+
+ // ADDING ALT_AT
+var q = document.getElementById("alt_placeholder");
+var text_alt = document.getElementById("alternative_alt_at");
+var my_list_alt = document.getElementById("alternative_alt_list");
+
+text_alt.addEventListener ('keypress', (event) => {
+  if (event.keyCode === 13) {
+  q.insertAdjacentHTML("afterend", "<div class='my_tag'>" + text_alt.value + "</div>");
+  my_list_alt.insertAdjacentHTML("beforeend", "<input type='hidden' name='alt_list[]' value='" + text_alt.value + "' />");
+  text_alt.value = "";
+}
+})
+
+
+
+
+
+// var forms = document.querySelectorAll("form");[]
+
+// for (const form of forms) {
+//   form.addEventListener ('submit', function(){
+//     Rails.fire(form, 'submit');
+//   })
+// }
+
+
 // $(document).ready(function(){
 
 //   /* 1. Visualizing things on Hover - See next part for action on click */

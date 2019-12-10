@@ -26,7 +26,7 @@ puts 'Creating 1 fake product user...'
     alternative = Alternative.new(
     title:    Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: "50 €",
+    ingredients: ["50 €"],
     difficulty: "0",
     prep_time: Time.now,
     alimentation_list: $list_of_tags.sample,
@@ -54,7 +54,7 @@ puts 'Creating 10 fake user...'
     alternative = Alternative.new(
     title:    Faker::Food.dish,
     description: Faker::Food.description,
-    ingredients: Faker::Food.ingredient,
+    ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
     difficulty: Faker::Number.between(from: 1, to: 5),
     prep_time: Time.now,
     alimentation_list: $list_of_tags.sample,

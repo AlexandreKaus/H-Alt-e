@@ -2,12 +2,12 @@
 
 <div class="restriction">
 <!-- Essai d'implementation des checkbox -->
-<%= form_tag alternatives_path, method: "GET" do |f| %>
+<%= form_tag alternatives_path, method: "GET", class: 'toto' do |f| %>
   <% $list_of_tags.each do |tag| %>
 
   <% check_box_tag "tag", tag %>
 <label class="fancy-checkbox">
-    <input type="checkbox" name="tag[]" value="<%= tag %>" <%= (params[:tag] || [] ).include?(tag) ? "checked" : "" %>/>
+    <input type="checkbox" name="tag[]" class="checkbox_filter" value="<%= tag %>" <%= (params[:tag] || [] ).include?(tag) ? "checked" : "" %>/>
     <i class="far fa-circle unchecked"></i>
     <i class="fas fa-circle checked"></i>
 </label>
@@ -51,8 +51,8 @@
     </div>
   </div>
 </div>
-<div class="white-line"></div>
+<div class="white-line-ind"></div>
 <% end %>
-<script type="text/javascript" src="dist/js/jquery-1.10.2.js"></script>
+
 
 
