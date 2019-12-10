@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_12_06_172750) do
     t.text "description"
     t.text "ingredients", default: [], array: true
     t.text "alt_at", default: [], array: true
-    t.float "difficulty"
+    t.string "difficulty"
     t.time "prep_time"
     t.boolean "diy", default: true
     t.bigint "user_id"

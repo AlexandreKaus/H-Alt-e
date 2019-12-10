@@ -1,5 +1,7 @@
 import "bootstrap";
 
+$( document ).ready(function() { $("#query").focus(); });
+
 // AUTO-UPDATE FILTER
 var checkBoxes = document.querySelectorAll(".checkbox_filter");
 var field = document.querySelector(".toto");
@@ -107,4 +109,3 @@ text_alt.addEventListener ('keypress', (event) => {
 //   $('.success-box').fadeIn(200);
 //   $('.success-box div.text-message').html("<span>" + msg + "</span>");
 // }
-$( document ).ready(function() { $("#query").focus(); });
