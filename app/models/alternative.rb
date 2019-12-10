@@ -16,6 +16,12 @@ class Alternative < ApplicationRecord
   acts_as_taggable_on :alimentations
 
   $list_of_tags = ["Bio", "Vegan", "Gluten Free"]
+  $difficulty = [ "Very easy",
+                     "Easy",
+                     "Moderate",
+                     "Challenging",
+                     "Hard"
+                   ]
 
   enum difficulty: [ "Very easy",
                      "Easy",
