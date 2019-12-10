@@ -1,5 +1,25 @@
 import "bootstrap";
 
+
+
+var checkBoxes = document.querySelectorAll(".checkbox_filter");
+var field = document.querySelector(".toto");
+
+for (const check of checkBoxes) {
+  check.addEventListener ('change', function(){
+    field.submit()
+  })
+};
+
+// var forms = document.querySelectorAll("form");
+
+// for (const form of forms) {
+//   form.addEventListener ('submit', function(){
+//     Rails.fire(form, 'submit');
+//   })
+// }
+
+
 // $(document).ready(function(){
 
 //   /* 1. Visualizing things on Hover - See next part for action on click */
