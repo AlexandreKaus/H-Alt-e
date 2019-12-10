@@ -17,6 +17,12 @@
   text-align: center;
 }
 
+.reviews-card{
+  color: white;
+  background-color: $dark-green;
+  margin-bottom: 50px;
+}
+
 .card-alternatives-container {
   display: flex;
   justify-content: space-between;
@@ -50,8 +56,8 @@ p {
 }
 
 .card-alternatives-right {
-  width: 420px;
   margin-left: 20px;
+  margin-top: 15px;
 }
 
 .separator {
@@ -111,9 +117,15 @@ p {
   width: 920px;
 }
 
+.property i {
+  margin-top: 20px;
+}
+
 .property {
   font-family: "Noto Sans", "Helvetica", "sans-serif";
   font-size: 14px;
+  margin-top: 3px;
+  margin-left:3px;
 }
 
 p {
