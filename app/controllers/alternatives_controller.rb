@@ -1,3 +1,4 @@
+
 class AlternativesController < ApplicationController
   before_action :set_alternatives, only: %i[show destroy edit update]
 
@@ -67,3 +68,5 @@ class AlternativesController < ApplicationController
     params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, :pic, alimentation_list: [])
   end
 end
+
+
