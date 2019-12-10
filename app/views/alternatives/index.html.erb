@@ -36,7 +36,30 @@
       <div class="property">  <h4> By <%= alternative.user.username %> </h4>D.I.Y.&nbsp;&nbsp;
       <i class="far fa-clock"></i>  <%= alternative.prep_time.strftime("%M min.") %>&nbsp;&nbsp;
 
-            <%= alternative.difficulty %>
+          <% count = 0 %>
+
+          <% case alternative.difficulty %>
+          <% when "Very easy" %>
+            <% count = 1 %>
+          <% when "Easy" %>
+            <% count = 2 %>
+          <% when "Moderate" %>
+            <% count = 3 %>
+          <% when "Challenging" %>
+             <% count = 4 %>
+          <% when "Hard" %>
+            <% count = 5 %>
+          <% end %>
+
+          <% count.times do %>
+          <i class="fas fa-circle"></i>
+          <% end %>
+
+          <% count_2 = 5 - count %>
+          <% count_2.times do %>
+          <i class="far fa-circle"></i>
+          <% end %>
+
             </div>
       <div class="d-flex">
         <% alternative.alimentation_list.each do |alim| %>
