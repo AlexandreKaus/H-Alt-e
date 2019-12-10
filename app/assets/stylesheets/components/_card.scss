@@ -17,6 +17,12 @@
   text-align: center;
 }
 
+.reviews-card{
+  color: white;
+  background-color: $dark-green;
+  margin-bottom: 50px;
+}
+
 .card-alternatives-container {
   display: flex;
   justify-content: space-between;
@@ -36,8 +42,14 @@ p {
   margin-left: 40px;
 }
 
+.myrev-opt-lft {
+  margin-left: 40px;
+  width: 350px;
+}
+
 .myrev-opt {
   margin-left: 40px;
+  width: 350px;
 }
 
 .myrev-opt p {
@@ -50,8 +62,8 @@ p {
 }
 
 .card-alternatives-right {
-  width: 420px;
   margin-left: 20px;
+  margin-top: 15px;
 }
 
 .separator {
@@ -76,7 +88,7 @@ p {
 
 #dash-hds {
   font-family: $headers-font !important;
-  text-align: left;
+  text-align: center;
   font-size: 40px;
   margin-top: 60px;
 }
@@ -92,7 +104,7 @@ p {
   margin-bottom: 20px;
   justify-content: align-items;
   position: relative;
-  right: 80px;
+  // right: 80px;
 }
 
 #title-rvw {
@@ -111,9 +123,15 @@ p {
   width: 920px;
 }
 
+.property i {
+  margin-top: 20px;
+}
+
 .property {
   font-family: "Noto Sans", "Helvetica", "sans-serif";
   font-size: 14px;
+  margin-top: 3px;
+  margin-left:3px;
 }
 
 p {
