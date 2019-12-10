@@ -39,8 +39,15 @@
           </div>
 
           <div class="supplies">
-            <h4>Supplies :</h4>
-            <p>- <%= @alternative.ingredients %></p>
+
+            <h4>Supplies</h4>
+            <% @alternative.ingredients.each do |ingredient| %>
+            <% if ingredient.index("\r").nil? %>
+              <p>- <%= ingredient %></p>
+            <% else %>
+              <p>- <%=  ingredient[2...ingredient.length] %></p>
+            <% end %>
+            <% end %>
           </div>
         </div>
       </div>

@@ -1,7 +1,5 @@
 import "bootstrap";
 
-
-
 var checkBoxes = document.querySelectorAll(".checkbox_filter");
 var field = document.querySelector(".toto");
 
@@ -11,7 +9,27 @@ for (const check of checkBoxes) {
   })
 };
 
-// var forms = document.querySelectorAll("form");
+
+// TESTING OF EVENTLISTENER TO ADD
+var p = document.querySelector("p");
+var text = document.getElementById("alternative_ingredients")
+var my_list = document.getElementById("alternative_ingredients_list")
+
+ text.addEventListener ('keypress', (event) => {
+  if (event.keyCode === 13) {
+  p.insertAdjacentHTML("beforeend", "<div class='my_tag'>" + text.value + "</div>");
+  my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + text.value + "' />");
+  text.value = "";
+}
+})
+
+
+
+
+
+
+
+// var forms = document.querySelectorAll("form");[]
 
 // for (const form of forms) {
 //   form.addEventListener ('submit', function(){
