@@ -7,7 +7,6 @@ class UpvotesController < ApplicationController
     @upvote.alternative = @alternative
     @upvote.save
     redirect_to alternative_path(@alternative)
-
   end
 
   def downvote

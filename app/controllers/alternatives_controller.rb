@@ -17,7 +17,6 @@ class AlternativesController < ApplicationController
   end
 
   def show
-
     @review = Review.new
     @upvote_count = @alternative.upvotes.where(downvote: false).count
     @downvote = @alternative.upvotes.where(downvote: true).count
