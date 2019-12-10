@@ -3,7 +3,7 @@ class CreateAlternatives < ActiveRecord::Migration[5.2]
     create_table :alternatives do |t|
       t.string :title
       t.text :description
-      t.text :ingredients
+      t.text :ingredients, array: true, default: []
       t.float :difficulty
       t.time :prep_time
       t.boolean :diy, default: true

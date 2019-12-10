@@ -14,15 +14,18 @@ for (const check of checkBoxes) {
 var addbutton = document.querySelector(".adding_button");
 var p = document.querySelector("p");
 var text = document.getElementById("alternative_ingredients")
+var my_list = document.getElementById("alternative_ingredients_list")
 var tags = document.querySelectorAll(".my_tag");
-var test = document.querySelector(".test_test");
+var test = document.getElementById("test_test");
  text.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
   p.insertAdjacentHTML("beforeend", "<div class='my_tag'>" + text.value + "</div>");
+  my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + text.value + "' />");
   text.value = "";
-  test.insertAdjacentText("afterend", "My inserted text")
 }
 })
+
+
 
 
 
