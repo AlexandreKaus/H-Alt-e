@@ -10,7 +10,9 @@
         <%= simple_form_for alternative do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
-        <%= f.input :ingredients %>
+        <p></p>
+        <%= f.input :ingredients, as: :text %>
+        <%= hidden_field_tag :ingredients, class="test_test" %>
         <%= f.input :difficulty %>
         <%= f.input :prep_time %>
         <%= f.input :photo %>
