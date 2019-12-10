@@ -15,8 +15,7 @@ class Alternative < ApplicationRecord
 
   acts_as_taggable_on :alimentations
 
-  $list_of_tags = ["Bio", "Vegan", "Gluten Free"]
-
+  $list_of_tags = ["Bio", "Vegan", "Gluten Free", "Vegetarian", "No plastic", "Local", "Zero waste"]
 
   include PgSearch::Model
   pg_search_scope :search_alternative,

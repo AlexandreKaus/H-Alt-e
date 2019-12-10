@@ -1,3 +1,4 @@
+
 class AlternativesController < ApplicationController
   before_action :set_alternatives, only: %i[show destroy edit update]
 
@@ -17,7 +18,6 @@ class AlternativesController < ApplicationController
   end
 
   def show
-
     @review = Review.new
     @upvote_count = @alternative.upvotes.where(downvote: false).count
     @downvote = @alternative.upvotes.where(downvote: true).count
@@ -64,3 +64,5 @@ class AlternativesController < ApplicationController
     params.require(:alternative).permit(:title, :description, :ingredients, :difficulty, :prep_time, :pic, alimentation_list: [])
   end
 end
+
+
