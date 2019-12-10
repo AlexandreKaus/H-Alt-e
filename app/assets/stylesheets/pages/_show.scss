@@ -20,9 +20,17 @@
 }
 
 .ingredients {
-  margin-top:0px;
+  margin-top:5px;
   margin-left: 20px;
-  line-height: 0px;
+  // line-height: 0px;
+}
+
+.diff {
+  justify-content: space-between;
+}
+
+.diff h4 {
+  margin-right: 10px;
 }
 
 .about-container h1 {
@@ -46,14 +54,17 @@
 #new_review > div > label {
   opacity: 0;
 }
+
 .description {
   text-align:center;
   font-family: "Frank Rhule Libre", "Georgia", "serif";
 
 }
+
 .title{
   text-align:left;
 }
+
 #title-vote {
   display:flex;
   justify-content: end;
@@ -66,15 +77,23 @@ width: 310px
 .first-comment {
   font-size: 18px;
 }
+
 .votes {
   font-family: "Noto Sans", "Helvetica", "Sans Serif";
 }
+
 .tag {
   font-family: "Noto Sans", "Helvetica", "Sans Serif";
 }
+
 .left-infos {
   width: 340px;
 }
+
+.left-infos .upvotes {
+  margin-top: 10px;
+}
+
 .ntm{
   margin-left: 0;
 
@@ -83,27 +102,67 @@ width: 310px
 #review_comment {
   width: 85%;
 }
+
 // .dif-circle{
 //   font-size: 14px;
 // }
+#rev-card{
+  background-color: $dark-green;
+  border: none;
+}
+
+.inf-rev u {
+  text-decoration: none;
+}
+
 .fa-circle {
   font-size: 12px;
 }
+
+.reviews h2{
+  margin-bottom: 50px;
+}
+
+.list-group-item {
+  padding: 0;
+}
+
 .supplies {
   margin-top:12px;
   line-height: 14px;
 }
+
+.supplies h4 {
+  margin-bottom: 15px;
+}
+
+// .inf-rev {
+//   justify-content: align-items;
+// }
+
+.inf-rev u {
+  font-size: 18px;
+}
+
+.ingredients .time {
+  margin-top: -8px;
+  margin-left: 18px;
+}
+
 h4 {
   font-size: 22px;
   line-height: 0.5;
 }
+
 .time{
   margin-top:12px;
 }
+
 .stepcard-text{
   display: flex;
   margin-right: 10px;
 }
+
 .reviews {
   text-align:center;
 }
