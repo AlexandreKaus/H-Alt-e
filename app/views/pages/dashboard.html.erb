@@ -10,7 +10,7 @@
     <div class="mydiy-card d-flex">
       <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
       <div class="mydiy-opt">
-        <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p>
+        <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> <br> <u> <%= alternative_select.created_at.strftime('%B %e, %Y') %></u></p>
         <div class="rest-diy ">
           <div class="delete">
           <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
