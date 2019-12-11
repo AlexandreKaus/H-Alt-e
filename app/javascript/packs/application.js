@@ -20,7 +20,7 @@ var my_list = document.getElementById("alternative_ingredients_list");
 
  text.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
-  p.insertAdjacentHTML("afterend", "<div class='my_tag'>" + text.value + "</div>");
+  p.innerHTML +=  "<div class='my_tag'>" + text.value + "</div>";
   my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + text.value + "' />");
   text.value = "";
 }
@@ -33,7 +33,7 @@ var my_list_alt = document.getElementById("alternative_alt_list");
 
 text_alt.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
-  q.insertAdjacentHTML("afterend", "<div class='my_tag'>" + text_alt.value + "</div>");
+  q.innerHTML +=  "<div class='my_tag'>" + text_alt.value + "</div>";
   my_list_alt.insertAdjacentHTML("beforeend", "<input type='hidden' name='alt_list[]' value='" + text_alt.value + "' />");
   text_alt.value = "";
 }
