@@ -17,13 +17,6 @@ class Alternative < ApplicationRecord
 
   $list_of_tags = ["Bio", "Vegan", "Gluten Free"]
 
-  enum difficulty: [ "Very easy",
-                     "Easy",
-                     "Moderate",
-                     "Challenging",
-                     "Hard"
-                   ]
-
   include PgSearch::Model
   pg_search_scope :search_alternative,
     against: [:title, :description],
