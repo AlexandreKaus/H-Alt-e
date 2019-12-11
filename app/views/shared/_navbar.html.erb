@@ -15,7 +15,6 @@
       placeholder: ""%>
       <% (params[:tag] || []).each do |t| %>
       <input type="hidden" name="tag[]" class="" value="<%= t %>" />
-
       <% end %>
     </div>
     <div class="search">
