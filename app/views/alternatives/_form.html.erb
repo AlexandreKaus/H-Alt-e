@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8 col-md-6">
     <div class="form-container">
@@ -12,8 +13,9 @@
         <%= f.input :description %>
         <%= f.input :ingredients, label: 'Ingredients (add by typing enter)' %>
 
-        <div id="ingredients_placeholder"></div>
+       <div id="ingredients_placeholder"></div>
         <div id="alternative_ingredients_list"></div>
+
         <%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
         <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
         <%= f.input :alt_at, label: 'Alternative of'%>
@@ -27,4 +29,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

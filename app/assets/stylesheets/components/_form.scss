@@ -29,15 +29,15 @@
 .my_tag{
   background-color: #fff;
   color:$dark-green;
-  width:100%;
 }
 .my_tag:hover{
   background-color: $coral;
 }
-.ingredients_placeholder {
-  display:flex;
-  justify-content:space-between;
+#ingredients_placeholder {
+;
+
 }
+
 #new_photo > input.btn.btn-primary {
   border: none;
 }
@@ -45,4 +45,8 @@
 #new_photo > input.btn.btn-primary :hover {
   border: none;
   background-color: none;
+}
+.my_tag{
+  width:70%;
+  margin-top: 10px;
 }

@@ -38,6 +38,7 @@
 .dropdown-item {
   text-align: right;
   padding-right: 0px;
+  background-color: $dark-green !important;
 }
 .dropdown-item:hover {
   color: white !important;
@@ -101,4 +102,13 @@ body > div > div.navbar.navbar-expand-sm.navbar-light.navbar-lewagon > div.searc
 }
 #navbarSupportedContent > ul > li > div{
   height: 170px;
+}
+#navbarSupportedContent > ul > li > div {
+    margin: auto;
+  border: none !important;
+  height: 12px;
+}
+#query {
+  padding-bottom:0 ;
+  padding-top:10px ;
 }
