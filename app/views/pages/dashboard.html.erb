@@ -2,22 +2,24 @@
   <h1><%= @user.username %>'s Dashboard</h1>
   <div id="dash-hds">My D.I.Y.'s :</div>
   <div class="dash-white-line"></div>
+
+
+
   <div class="box-mydiy">
     <% @alternatives_select.each do |alternative_select| %>
     <div class="mydiy-card d-flex">
       <img src="https://www.atelierdeschefs.com/media/recette-e23473-pommes-de-terre-facon-arrabbiata-et-gambas-au-basilic.jpg" class="maindash-img" alt="dash-pic">
       <div class="mydiy-opt">
-
         <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p>
         <div class="rest-diy ">
           <div class="delete">
           <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fa fa-trash-alt destroy_seed"></i> <p>Delete </p>
+          <i class="fa fa-trash-alt destroy_seed"> Delete </i>
           <% end %>
           </div>
           <div class="edit">
           <%= link_to edit_alternative_path(alternative_select) do %>
-          <i class="fa fa-edit edit_seed"></i> <p>Edit</p>
+          <i class="fa fa-edit edit_seed"> Edit</i>
           <% end %>
           </div>
         </div>
@@ -26,6 +28,9 @@
     <% end %>
   </div>
   <div class="dash-white-line"></div>
+
+
+
   <div class="gen-cont d-flex">
     <div class="bottom-container">
       <div id="dash-hds">My reviews</div>
