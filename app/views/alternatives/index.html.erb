@@ -15,8 +15,6 @@
   <%= label_tag tag %> <br>
   <% end %>
   <%= hidden_field_tag :query, params[:query]  %>
-  <%= submit_tag "Search", class: "btn" %>
-  <%= link_to "Reset", alternatives_path  %>
 <% end %>
 </div>
 <!-- Essai d'implementation des checkbox -->
@@ -29,7 +27,7 @@
     <div class="card-alternatives-left">
       <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
 
-      <p> <%= alternative.description %> </p>
+      <p> <%= alternative.description[0...200] %>… </p>
     </div>
     <div class="separator"></div>
     <div class="card-alternatives-right">
