@@ -10,7 +10,8 @@ class AlternativesController < ApplicationController
         alternatives = Alternative.search_alternative(params[:query])
       end
     elsif params[:tag].present?
-      alternatives = Alternative.tagged_with(params[:tag], :match_all => true)
+
+      alternatives = Alternative.tagged_with(params[:tag], :any => true)
     else
       alternatives = Alternative.all
     end

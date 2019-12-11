@@ -1,8 +1,10 @@
 <div class="container">
   <div class="box-stepcard">
+    <% count = 0 %>
     <% @alternative.photos.each do |photo| %>
     <div class="stepcard">
-      <h3><%= photo.step %> - <%= photo.name %></h3>
+      <% count += 1 %>
+      <h3><%= count %> - <%= photo.name %></h3>
       <div class="stepcard-text">
         <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
         <div class="ntm">
