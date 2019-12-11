@@ -12,17 +12,26 @@ for (const check of checkBoxes) {
   })
 };
 
-
 // ADDING INGREDIENTS
 var p = document.getElementById("ingredients_placeholder");
 var text = document.getElementById("alternative_ingredients");
 var my_list = document.getElementById("alternative_ingredients_list");
-
+const clearIngredients = () => {
+  text.value =  '';
+}
+window.onload = clearIngredients
  text.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
   p.innerHTML +=  "<div class='my_tag'>" + text.value + "</div>";
   my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + text.value + "' />");
   text.value = "";
+  document.querySelectorAll(".my_tag").forEach((element) => {
+    element.addEventListener("click", (event) => {
+      event.target.remove();
+  })
+
+ })
+
 }
 })
 
@@ -38,6 +47,8 @@ text_alt.addEventListener ('keypress', (event) => {
   text_alt.value = "";
 }
 })
+
+
 
 
 

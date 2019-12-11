@@ -4,7 +4,10 @@ puts 'Clean database...'
 
 User.destroy_all
 
-puts 'Creating 10 fake user...'
+puts 'Creating 5 fake user...'
+puts 'Creating 10 Alternatives'
+
+
 5.times do
   user = User.new(
     username: Faker::Internet.username,
