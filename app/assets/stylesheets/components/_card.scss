@@ -39,7 +39,11 @@ p {
 }
 
 .mydiy-opt {
-  margin-left: 40px;
+  margin-left: 20px;
+}
+
+.mydiy-opt p {
+  font-size: 26px !important;
 }
 
 .myrev-opt-lft {
@@ -74,16 +78,27 @@ p {
 
 #title-my {
   font-size: 30px;
+  font-style: $body-font;
 }
 
 .mydiy-card {
-  margin-top: 20px;
+  // margin-top: 20px;
+  position: relative;
 }
+
+.mydiy-card img {
+  width: 120px;
+  height: 120px;
+}
+
+
+
 
 .rest-diy {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
 }
 
 #dash-hds {
