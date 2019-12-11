@@ -58,10 +58,9 @@ puts 'Creating 10 fake user...'
     prep_time: Time.now,
     alimentation_list: [$list_of_tags.sample, $list_of_tags.sample],
     alt_at: ["Dentifrice","Brosse à dent"],
-    pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
     user: user,
     )
-    pic.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
+    alternative.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
     alternative.save!
 
     3.times do
