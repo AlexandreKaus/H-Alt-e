@@ -5,11 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
-
-puts 'Clean database...'
-
-User.destroy_all
 
 # Seed pour produits
 
@@ -39,7 +34,11 @@ User.destroy_all
 #   end
 # end
 
-# Seed pour DIYs
+require 'faker'
+
+puts 'Clean database...'
+
+User.destroy_all
 
 puts 'Creating 10 fake user...'
 5.times do
@@ -55,10 +54,10 @@ puts 'Creating 10 fake user...'
     title:    Faker::Food.dish,
     description: Faker::Food.description,
     ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
-    difficulty: [ "Very easy","Easy","Moderate","Challenging","Hard"].sample,
+    difficulty: ["Very easy","Easy","Moderate","Challenging","Hard"].sample,
     prep_time: Time.now,
     alimentation_list: [$list_of_tags.sample, $list_of_tags.sample],
-    alt_at: [$list_of_tags.sample, $list_of_tags.sample],
+    alt_at: ["Dentifrice","Brosse à dent"],
     pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
     user: user,
     )
@@ -66,8 +65,8 @@ puts 'Creating 10 fake user...'
 
     3.times do
       photo = Photo.new(
-        name: "Nom de la step",
-        detail: "description",
+        name: "Holder name",
+        detail: "description au dd test test test test test test test description au dd test test test test test test test " ,
         alternative: alternative,
         )
       photo.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
