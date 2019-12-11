@@ -39,12 +39,12 @@
 }
 
 .step-img {
-  width: 288px;
-  height: 216px;
+  width: 170px;
+  height: 110px;
   -webkit-filter: url(#monochrome);
   filter:  url(#monochrome);
   border: 1px solid $dark-green;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   object-fit: cover;
 
 }
