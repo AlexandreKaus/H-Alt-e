@@ -13,31 +13,31 @@ User.destroy_all
 
 # Seed pour produits
 
-puts 'Creating 1 fake product user...'
-1.times do
-  user = User.new(
-    username: Faker::Internet.username,
-    email: Faker::Internet.email,
-    password: 'password',
-  )
-  user.save!
+# puts 'Creating 1 fake product user...'
+# 1.times do
+#   user = User.new(
+#     username: Faker::Internet.username,
+#     email: Faker::Internet.email,
+#     password: 'password',
+#   )
+#   user.save!
 
-  1.times do
-    alternative = Alternative.new(
-    title:    Faker::Food.dish,
-    description: Faker::Food.description,
-    ingredients: ["50 €"],
-    difficulty: "0",
-    prep_time: Time.now,
-    alimentation_list: $list_of_tags.sample,
-    diy: false,
-    pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
-    user: user,
-    )
-    alternative.save!
+#   1.times do
+#     alternative = Alternative.new(
+#     title:    Faker::Food.dish,
+#     description: Faker::Food.description,
+#     ingredients: ["50 €"],
+#     difficulty: "0",
+#     prep_time: Time.now,
+#     alimentation_list: $list_of_tags.sample,
+#     diy: false,
+#     pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
+#     user: user,
+#     )
+#     alternative.save!
 
-  end
-end
+#   end
+# end
 
 # Seed pour DIYs
 
@@ -55,9 +55,10 @@ puts 'Creating 10 fake user...'
     title:    Faker::Food.dish,
     description: Faker::Food.description,
     ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
-    difficulty: Faker::Number.between(from: 1, to: 5),
+    difficulty: [ "Very easy","Easy","Moderate","Challenging","Hard"].sample,
     prep_time: Time.now,
-    alimentation_list: $list_of_tags.sample,
+    alimentation_list: [$list_of_tags.sample, $list_of_tags.sample],
+    alt_at: [$list_of_tags.sample, $list_of_tags.sample],
     pic: "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647451/veeq82qzrejsag4qxy1r.jpg",
     user: user,
     )
@@ -65,7 +66,9 @@ puts 'Creating 10 fake user...'
 
     3.times do
       photo = Photo.new(
-        alternative: alternative
+        name: "Nom de la step",
+        detail: "description",
+        alternative: alternative,
         )
       photo.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575647869/gmkptrtsf3si6wwlsdvk.jpg"
       photo.save!
