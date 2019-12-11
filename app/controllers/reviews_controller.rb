@@ -12,11 +12,11 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @review = Review.find(params[:id])
-  #   @review.alternative.destroy
-  #   redirect_to dashboard_path
-  # end
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to dashboard_path
+  end
 
   private
 
