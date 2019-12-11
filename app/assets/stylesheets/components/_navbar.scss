@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   margin-bottom: 50px;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -97,4 +98,7 @@ i .transp-no {
 body > div > div.navbar.navbar-expand-sm.navbar-light.navbar-lewagon > div.searchbar > div.search > input[type=submit] {
   background:none;
   z-index: -1000;
+}
+#navbarSupportedContent > ul > li > div{
+  height: 170px;
 }
