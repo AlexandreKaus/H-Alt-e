@@ -45,7 +45,7 @@
             <p id="my-rev"><%= review_select.comment %></p>
           </div>
           <div class="rest-rev ml-auto">
-            <%= link_to alternative_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <%= link_to review_path(review_select), method: :delete, data: { confirm: "Are you sure?" } do %>
             <i class="fa fa-trash-alt destroy_seed"></i>
             <% end %>
           </div>
