@@ -10,17 +10,18 @@
         <%= simple_form_for alternative do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
-        <%= f.input :ingredients%>
+        <%= f.input :ingredients, label: 'Ingredients (add by typing enter)' %>
+
         <div id="ingredients_placeholder"></div>
         <div id="alternative_ingredients_list"></div>
-        <%= f.input :difficulty, collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
+        <%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
         <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
-        <%= f.input :alt_at %> <p></p>
+        <%= f.input :alt_at, label: 'Alternative of'%>
         <div id="alt_placeholder"></div>
         <div id="alternative_alt_list"></div>
-        <%= f.input :pic %>
+        <%= f.input :pic, label: 'Picture' %>
         <%= f.input :pic_cache, as: :hidden %>
-        <%= f.input :alimentation_list, label: "Alimentation",  collection: $list_of_tags, as: :check_boxes %>
+        <%= f.input :alimentation_list, label: "Alimentation", collection: $list_of_tags, as: :check_boxes %>
         <%= f.button :submit, class: 'btn btn-primary2' %>
       <% end %>
       </div>
