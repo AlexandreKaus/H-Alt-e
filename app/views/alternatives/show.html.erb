@@ -7,7 +7,8 @@
 <div class="container">
   <div class="about-container">
     <div id="title-vote">
-      <div class="title"> <%= @alternative.title %> <u>by <%= @alternative.user.username %> </u>
+      <div class="title"> <%= @alternative.title %>
+        <div class="username"><u>by <%= @alternative.user.username %> </u></div>
       </div>
     </div>
     <div class="item-infos d-flex">
@@ -28,8 +29,8 @@
         <div class="diff-time d-flex">
         </div>
         <div class="ingredients">
-          <div class="diff d-flex"><h4>Difficulty</h4>
-
+          <div class="diff d-flex">
+            <h4>Difficulty</h4>
           <% case @alternative.difficulty %>
           <% when "Very easy" %>
             <% count = 1 %>
@@ -43,13 +44,13 @@
             <% count = 5 %>
           <% end %>
           <% count.times do %>
-          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>&thinsp;
           <% end %>
           <% count_2 = 5 - count %>
           <% count_2.times do %>
           <i class="far fa-circle"></i>
           <% end %>
-          <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M.min") %></p></div>
+          <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           </div>
           <div class="supplies">
             <h4>Supplies</h4>
@@ -64,8 +65,8 @@
           </div>
 
           <div class="supplies">
-
-            <h4>Alternative of </h4>
+            <div class="alt-of">
+            <h4>Alternative of&thinsp;: </h4>
             <% @alternative.alt_at.each do |alt| %>
             <% if alt.index("\r").nil? %>
               <p><%= alt %></p>
@@ -73,6 +74,7 @@
               <p><%=  alt[2...alt.length] %></p>
             <% end %>
             <% end %>
+            </div>
           </div>
         </div>
       </div>

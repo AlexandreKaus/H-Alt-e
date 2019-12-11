@@ -107,7 +107,6 @@
 }
 
 .ntm p {
-  text-align: justify;
   }
 
 #review_comment {
@@ -144,7 +143,7 @@
 }
 
 .supplies h4 {
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
 }
 
 // .inf-rev {
@@ -156,17 +155,16 @@
 }
 
 .ingredients .time {
-  margin-top: -8px;
-  margin-left: 18px;
+  // margin-top: -8px;
+  margin-left: 10px;
 }
 
 h4 {
   font-size: 22px;
-  line-height: 0.5;
+  // line-height: 0.5;
 }
 
 .time{
-  margin-top:12px;
 }
 
 .stepcard-text{
@@ -176,4 +174,28 @@ h4 {
 
 .reviews {
   text-align:center;
+}
+.username {
+  margin-top: -25px;
+  margin-bottom: -25px;
+
+}
+.alt-of {
+  margin-top: 10px;
+}
+body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div:nth-child(3) > div > h4 {
+  margin-top:25px;
+}
+body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div:nth-child(3) > div > p{
+  margin:8px;
+}
+body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div > p{
+  margin:8px;
+}
+.fa-circle {
+  margin:auto;
+  margin-top:10px;
+}
+body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div.diff.d-flex > div > p {
+  margin:0;
 }
