@@ -36,11 +36,9 @@ text_alt.addEventListener ('keypress', (event) => {
   q.insertAdjacentHTML("afterend", "<div class='my_tag'>" + text_alt.value + "</div>");
   my_list_alt.insertAdjacentHTML("beforeend", "<input type='hidden' name='alt_list[]' value='" + text_alt.value + "' />");
   text_alt.value = "";
+
 }
 })
-
-
-
 
 
 // var forms = document.querySelectorAll("form");[]
