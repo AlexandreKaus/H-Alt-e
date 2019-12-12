@@ -125,110 +125,110 @@ lips = Alternative.new(
     lips.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576095940/index_jrxlhl.jpg"
     lips.save!
 
-pierre_da = Alternative.new(
-    title: "Natural Deodorant",
-    description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
-    ingredients: ["", "", "",""],
-    difficulty: "Challenging",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["Bio", "Zero Waste"],
-    alt_at: ["Deodorant"],
-    user: user3,
-    )
-    pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099017/deodorant_yairkv.jpg"
-    pierre_da.save!
+# pierre_da = Alternative.new(
+#     title: "Natural Deodorant",
+#     description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
+#     ingredients: ["", "", "",""],
+#     difficulty: "Challenging",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["Bio", "Zero Waste"],
+#     alt_at: ["Deodorant"],
+#     user: user3,
+#     )
+#     pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099017/deodorant_yairkv.jpg"
+#     pierre_da.save!
 
-prod4 = Alternative.new(
-    title: "Mason Jar",
-    description: "Repurpose your mason jars with one of these 50 DIY projects. From practical uses to beautiful home decor ideas, you're sure to find at least one project that you'll love.",
-    ingredients: ["", "", "",""],
-    difficulty: "Very easy",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user1,
-    )
-    prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099655/Extraordinary-Adorable-DIY-Mason-Jar-Crafts-to-Pursue_psxion.jpg"
-    prod4.save!
+# prod4 = Alternative.new(
+#     title: "Mason Jar",
+#     description: "Repurpose your mason jars with one of these 50 DIY projects. From practical uses to beautiful home decor ideas, you're sure to find at least one project that you'll love.",
+#     ingredients: ["", "", "",""],
+#     difficulty: "Very easy",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user1,
+#     )
+#     prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099655/Extraordinary-Adorable-DIY-Mason-Jar-Crafts-to-Pursue_psxion.jpg"
+#     prod4.save!
 
-prod5 = Alternative.new(
-    title: "zero waste toothpaste",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["Vegan", "Zero Waste", "Plastic-Free"],
-    alt_at: [""],
-    user: user3,
-    )
-    prod5.remote_pic_url = ""
-    prod5.save!
+# prod5 = Alternative.new(
+#     title: "zero waste toothpaste",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["Vegan", "Zero Waste", "Plastic-Free"],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod5.remote_pic_url = ""
+#     prod5.save!
 
-prod6 = Alternative.new(
-    title: "",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user3,
-    )
-    prod6.remote_pic_url = ""
-    prod6.save!
+# prod6 = Alternative.new(
+#     title: "",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod6.remote_pic_url = ""
+#     prod6.save!
 
-prod7 = Alternative.new(
-    title: "",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user3,
-    )
-    prod7.remote_pic_url = ""
-    prod7.save!
+# prod7 = Alternative.new(
+#     title: "",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod7.remote_pic_url = ""
+#     prod7.save!
 
-prod8 = Alternative.new(
-    title: "",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user3,
-    )
-    prod8.remote_pic_url = ""
-    prod8.save!
+# prod8 = Alternative.new(
+#     title: "",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod8.remote_pic_url = ""
+#     prod8.save!
 
-prod9 = Alternative.new(
-    title: "",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user3,
-    )
-    prod9.remote_pic_url = ""
-    prod9.save!
+# prod9 = Alternative.new(
+#     title: "",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod9.remote_pic_url = ""
+#     prod9.save!
 
 
-prod10 = Alternative.new(
-    title: "",
-    description: "",
-    ingredients: ["", "", "",""],
-    difficulty: "",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-    alimentation_list: ["", ""],
-    alt_at: [""],
-    user: user3,
-    )
-    prod10.remote_pic_url = ""
-    prod10.save!
+# prod10 = Alternative.new(
+#     title: "",
+#     description: "",
+#     ingredients: ["", "", "",""],
+#     difficulty: "",
+#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+#     alimentation_list: ["", ""],
+#     alt_at: [""],
+#     user: user3,
+#     )
+#     prod10.remote_pic_url = ""
+#     prod10.save!
 
 
 puts 'Finished!'

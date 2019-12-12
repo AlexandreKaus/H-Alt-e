@@ -18,7 +18,7 @@
 
         <%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
         <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
-        <%= f.input :alt_at, label: 'Alternative of'%>
+
         <div class="ligndiv d-flex">
         <div class="diffdiv"><%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %></div>
         <div class="timediv"><%= f.input :prep_time, as: :time, default: Time.parse('0:30') %></div></div>
