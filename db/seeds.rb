@@ -8,7 +8,7 @@ puts 'Creating 5 fake user...'
 puts 'Creating 10 Alternatives'
 
 billy = User.new(
-    username: "By Billy Frampton",
+    username: "Billy Frampton",
     email: "b-frampton@gmail.com",
     password: 'password',
   )
@@ -65,7 +65,7 @@ beewaxwrap = Alternative.new(
     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
     alimentation_list: ["Zero Waste", "Plastic-Free"],
     alt_at: ["Food plastic wrap","Aluminium foil"],
-    user: ben,
+    user: billy,
     )
     beewaxwrap.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/index_pic_vdfx93.jpg"
     beewaxwrap.save!

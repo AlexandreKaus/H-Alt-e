@@ -60,12 +60,23 @@
             <% end %>
             <% end %>
           </div>
-          <div class="supplies">
-            <div class="alt-of">
-              <h4>Alternative of&thinsp;:</h4>
+
+        </div>
+      </div>
+
+      <div class="description-right">
+        <div class="description">
+          <h3>Description</h3>
+          <%= @alternative.description %>
+        </div>
+
+        <div class="supplies">
+          <div class="alt-of">
+            <h4>Alternative of</h4>
+            <div class="tag-container">
               <% @alternative.alt_at.each do |alt| %>
               <% if alt.index("\r").nil? %>
-             <div class="tag-container"><div class="my_tag"> <p><%= alt %></p></div></div>
+             <div class="my_tag"> <p><%= alt %></p></div>
               <% else %>
               <p><%=  alt[2...alt.length] %></p>
               <% end %>
@@ -73,11 +84,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="description-right">
-        <div class="description">
-          <h3>Description</h3>
-        <%= @alternative.description %></div>
+
       </div>
     </div>
     <div class="white-line"></div>
