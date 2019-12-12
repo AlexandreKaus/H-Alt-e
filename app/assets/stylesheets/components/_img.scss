@@ -36,6 +36,12 @@
   border: 1px solid $dark-green;
   box-sizing: border-box;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.maindash-img img {
+  height: 100%;
+  width: 100%;
 }
 
 .step-img {
