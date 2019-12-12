@@ -3,6 +3,53 @@
     text-shadow: none;
     background:#f46c6e;
 }
+.ingredients {
+  height: 100%;
+}
+
+#alternative_description {
+  height: 100%;
+}
+.no-bs-validation {
+  .is-valid, .is-invalid {
+    border-color: $gray-400;
+    background-image: inherit;
+    &:focus {
+      border-color: inherit;
+      box-shadow: 0 0 0 .2rem $gray-400;
+    }
+  }
+}
+#alternative_alt_at {
+  height:38px;
+}
+#alternative_ingredients {
+  height:38px;
+}
+.my_tag{
+  background-color: #fff;
+  color:$dark-green;
+}
+.my_tag:hover{
+  background-color: $coral;
+}
+#ingredients_placeholder {
+;
+
+}
+
+#new_photo > input.btn.btn-primary {
+  border: none;
+}
+
+#new_photo > input.btn.btn-primary :hover {
+  border: none;
+  background-color: none;
+}
+.my_tag{
+  width:70%;
+  margin-top: 10px;
+=======
 
 .diffdiv {
   width: 30%;

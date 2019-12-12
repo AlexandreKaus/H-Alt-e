@@ -96,7 +96,7 @@
       <h3><%= step %> - <%= photo.name %></h3>
       <% step +=1 %>
       <div class="stepcard-text">
-        <%= cl_image_tag photo.photo, crop: :fill, class: "step-img" %>
+       <div class="step-img"> <%= cl_image_tag photo.photo, class: "step-img" %></div>
         <div class="ntm">
           <p><%= photo.detail %></p>
         </div>
@@ -124,4 +124,3 @@
   </div>
   <div class="white-line"></div>
 </div>
-<% end %>
