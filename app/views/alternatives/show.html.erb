@@ -91,7 +91,7 @@
       <div class="stepcard-text">
         <div class="step-img"> <%= cl_image_tag photo.photo, class: "step-img" %></div>
         <div class="ntm">
-          <p><%= photo.detail %></p>
+          <p><%= photo.detail[0...150] %>…</p>
         </div>
       </div>
     </div>
