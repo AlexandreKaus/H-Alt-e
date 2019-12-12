@@ -184,6 +184,14 @@ h4 {
 .alt-of {
   margin-top: 10px;
 }
+.tag-container{
+  display:flex;
+  justify-content:initial;
+  flex-wrap:wrap;
+}
+.tag-container > p{
+
+}
 body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div:nth-child(3) > div > h4 {
   margin-top:25px;
 }
@@ -199,4 +207,7 @@ body > div > div.container > div.about-container > div.item-infos.d-flex > div.g
 }
 body > div > div.container > div.about-container > div.item-infos.d-flex > div.group-item > div.ingredients > div.diff.d-flex > div > p {
   margin:0;
+}
+.my_tag {
+height:30px;
 }
