@@ -34,8 +34,9 @@
   background-color: $coral;
 }
 #ingredients_placeholder {
-;
-
+  display:flex;
+  justify-content:initial;
+  flex-wrap:wrap;
 }
 
 #new_photo > input.btn.btn-primary {
@@ -47,10 +48,8 @@
   background-color: none;
 }
 .my_tag{
-  width:70%;
-  margin-top: 10px;
-=======
-
+  margin: 0px 10px 10px 0px;
+}
 .diffdiv {
   width: 30%;
   margin-right: 50px;
@@ -93,9 +92,4 @@
 .ingredients_placeholder {
   display: flex;
   justify-content: initial;
-}
-
-.my-tag{
-  width: 100%;
-
 }
