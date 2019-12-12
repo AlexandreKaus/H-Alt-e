@@ -62,10 +62,10 @@
           </div>
           <div class="supplies">
             <div class="alt-of">
-              <h4>Alternative of&thinsp;: </h4>
+              <h4>Alternative of&thinsp;:</h4>
               <% @alternative.alt_at.each do |alt| %>
               <% if alt.index("\r").nil? %>
-              <p><%= alt %></p>
+             <div class="tag-container"><div class="my_tag"> <p><%= alt %></p></div></div>
               <% else %>
               <p><%=  alt[2...alt.length] %></p>
               <% end %>
