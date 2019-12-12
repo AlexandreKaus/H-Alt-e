@@ -20,19 +20,23 @@
     }
   }
 }
+
 #alternative_alt_at {
-  height:38px;
+  height: 38px;
 }
 #alternative_ingredients {
-  height:38px;
+  height: 38px;
 }
+
 .my_tag{
   background-color: #fff;
   color:$dark-green;
 }
+
 .my_tag:hover{
   background-color: $coral;
 }
+
 #ingredients_placeholder {
   display:flex;
   justify-content:initial;
@@ -47,9 +51,11 @@
   border: none;
   background-color: none;
 }
+
 .my_tag{
   margin: 0px 10px 10px 0px;
 }
+
 .diffdiv {
   width: 30%;
   margin-right: 50px;
@@ -88,8 +94,14 @@
 .formgrid .form-group {
   width: 70%;
   margin: auto;
+}
 
 .ingredients_placeholder {
   display: flex;
   justify-content: initial;
 }
+
+.my-tag {
+  width: 100%;
+}
+
