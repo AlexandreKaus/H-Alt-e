@@ -37,7 +37,7 @@ window.onload = clearIngredients
 
 document.querySelector(".new_alternative").addEventListener('submit', (event) => {
 document.querySelectorAll(".tag_ingredient").forEach((element) => {
-   my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list[]' value='" + element.innerText + "' />");
+   my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='ingredients_list' value='" + element.innerText + "' />");
  })
 })
 
