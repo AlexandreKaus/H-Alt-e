@@ -69,6 +69,3 @@ document.querySelectorAll(".tag_alt").forEach((element) => {
  })
 })
 
-}
-})
-
