@@ -53,6 +53,7 @@ window.onload = clearAlt
   if (event.keyCode === 13) {
   q.innerHTML +=  "<div class='my_tag tag_alt'>" + text_alt.value + "</div>";
   text_alt.value = "";
+
   document.querySelectorAll(".tag_alt").forEach((element) => {
     element.addEventListener("click", (event) => {
       event.target.remove();
@@ -67,3 +68,7 @@ document.querySelectorAll(".tag_alt").forEach((element) => {
    my_list.insertAdjacentHTML("beforeend", "<input type='hidden' name='alt_list[]' value='" + element.innerText + "' />");
  })
 })
+
+}
+})
+

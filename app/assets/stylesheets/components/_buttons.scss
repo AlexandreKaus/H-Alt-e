@@ -21,3 +21,92 @@ margin-right: auto;
   // width: 20%;
   text-decoration: underline;
 }
+
+// #new_photo > div.blocsrc > div:nth-child(2) > button {
+//   border-style: none;
+//   // font-size: 28px;
+// }
+
+#new_photo > div.blocsrc > div:nth-child(2) > button:hover {
+  background-color: $dark-green;
+}
+
+
+#new_photo > input.fas.fa-plus {
+  color: $dark-green;
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  // width: 120px;
+  // font-size: 30px;
+}
+
+
+#new_photo > div.btts > input:nth-child(1) {
+  color: $dark-green;
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+// #new_photo > div.btts > input:nth-child(1):hover {
+//   color: $dark-green;
+//   background-color: white;
+//   border-radius: 3px;
+//   height: 30px;
+//   border: 2px solid $green;
+//   font-weight: bold;
+// }
+
+
+#new_alternative > input.btn.btn.btn-primary2 {
+  color: $dark-green;
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+
+.btts {
+  justify-content: center;
+}
+
+#new_photo > div.crtbtn > input.fas.fa-plus {
+  color: $dark-green;
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+#new_photo > div.crtbtn > input.btn.btn-primary {
+  color: $dark-green;
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+
+.crtbtn {
+  margin-top: 10px;
+  justify-content: center
+}
+// .btts {
+//   justify-content: align-center;
+// }
+// #new_photo > input.fas.fa-plus:hover {
+//   color: $dark-green;
+//   background-color: #408759;
+//   border-radius: 3px;
+//   height: 60px;
+//   width: 120px;
+//   font-size: 30px;
+//   border: none;
+// }
