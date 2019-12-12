@@ -1,5 +1,4 @@
 <title>H-Alt-e | <%= @alternative.title %></title>
-
 <% if @alternative.diy == false %>
 <%= @alternative.title %>TEST OK</h1>
 <h1><%= @alternative.ingredients %></h1>
@@ -14,9 +13,7 @@
     <div class="item-infos d-flex">
       <div class="group-item">
         <div class="left-infos">
-
           <%= cl_image_tag @alternative.pic, crop: :fill, class: "step-img" %>
-
           <div class="upvotes">
             <div class="good"><a href="<%= alternative_upvote_path(@alternative.id) %>" class=""><span class="fas fa-plus"></span> Good alternative&nbsp;</a></div>
             <div class="bad"><a href="<%= alternative_downvote_path(@alternative.id) %>" class=""><span class="fas fa-minus"></span> Bad alternative&nbsp;</a></div>
@@ -31,52 +28,48 @@
         <div class="ingredients">
           <div class="diff d-flex">
             <h4>Difficulty</h4>
-
             <% count = 0 %>
-
-          <% case @alternative.difficulty %>
-          <% when "Very easy" %>
+            <% case @alternative.difficulty %>
+            <% when "Very easy" %>
             <% count = 1 %>
-          <% when "Easy" %>
+            <% when "Easy" %>
             <% count = 2 %>
-          <% when "Moderate" %>
+            <% when "Moderate" %>
             <% count = 3 %>
-          <% when "Challenging" %>
-             <% count = 4 %>
-          <% when "Hard" %>
+            <% when "Challenging" %>
+            <% count = 4 %>
+            <% when "Hard" %>
             <% count = 5 %>
-          <% end %>
-          <% count.times do %>
-          <i class="fas fa-circle"></i>&thinsp;
-          <% end %>
-          <% count_2 = 5 - count %>
-          <% count_2.times do %>
-          <i class="far fa-circle"></i>
-          <% end %>
-          <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
+            <% end %>
+            <% count.times do %>
+            <i class="fas fa-circle"></i>&thinsp;
+            <% end %>
+            <% count_2 = 5 - count %>
+            <% count_2.times do %>
+            <i class="far fa-circle"></i>
+            <% end %>
+            <div class="time"><p> <i class="far fa-clock"></i>  <%= @alternative.prep_time.strftime("%M min.") %></p></div>
           </div>
           <div class="supplies">
             <h4>Supplies</h4>
             <% @alternative.ingredients.each do |ingredient| %>
             <% if ingredient.index("\r").nil? %>
-              <p>- <%= ingredient %></p>
+            <p>- <%= ingredient %></p>
             <% else %>
-              <p>- <%=  ingredient[2...ingredient.length] %></p>
+            <p>- <%=  ingredient[2...ingredient.length] %></p>
             <% end %>
             <% end %>
-
           </div>
-
           <div class="supplies">
             <div class="alt-of">
-            <h4>Alternative of&thinsp;: </h4>
-            <% @alternative.alt_at.each do |alt| %>
-            <% if alt.index("\r").nil? %>
+              <h4>Alternative of&thinsp;: </h4>
+              <% @alternative.alt_at.each do |alt| %>
+              <% if alt.index("\r").nil? %>
               <p><%= alt %></p>
-            <% else %>
+              <% else %>
               <p><%=  alt[2...alt.length] %></p>
-            <% end %>
-            <% end %>
+              <% end %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -96,7 +89,7 @@
       <h3><%= step %> - <%= photo.name %></h3>
       <% step +=1 %>
       <div class="stepcard-text">
-       <div class="step-img"> <%= cl_image_tag photo.photo, class: "step-img" %></div>
+        <div class="step-img"> <%= cl_image_tag photo.photo, class: "step-img" %></div>
         <div class="ntm">
           <p><%= photo.detail %></p>
         </div>
@@ -107,7 +100,7 @@
   <div class="reviews-card">
     <div class="white-line"></div>
     <ul class="list-group">
-     <span class="reviews"> <h2>Reviews</h2></span>
+      <span class="reviews"> <h2>Reviews</h2></span>
       <% if @alternative.reviews.empty? %>
       <% else %>
       <% @alternative.reviews.each do |review| %>
@@ -124,3 +117,4 @@
   </div>
   <div class="white-line"></div>
 <% end %>
+
