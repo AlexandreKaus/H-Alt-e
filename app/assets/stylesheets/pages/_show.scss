@@ -58,8 +58,9 @@
 .description {
   text-align:center;
   font-family: "Frank Rhule Libre", "Georgia", "serif";
-  margin-top: -80px;
-
+}
+.description > p {
+  text-align: left;
 }
 
 .title{
