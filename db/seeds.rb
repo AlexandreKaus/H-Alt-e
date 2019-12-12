@@ -119,6 +119,7 @@ beewaxwrap = Alternative.new(
     step6.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094423/Step6_erdjv3.jpg"
     step6.save!
 
+
 pierre_da = Alternative.new(
     title: "Natural Deodorant",
     description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
