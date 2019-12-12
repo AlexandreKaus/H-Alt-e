@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
   <div class="col-12 col-sm-8 col-md-6">
-    <div class="form-container">
+    <div class="form-container1">
       <% if alternative.new_record? %>
         <h1>Create a new alternative</h1>
       <% else %>
@@ -13,9 +13,10 @@
         <%= f.input :ingredients%>
         <div id="ingredients_placeholder"></div>
         <div id="alternative_ingredients_list"></div>
-        <%= f.input :difficulty, collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
-        <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
         <%= f.input :alt_at %> <p></p>
+        <div class="ligndiv d-flex">
+        <div class="diffdiv"><%= f.input :difficulty, collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %></div>
+        <div class="timediv"><%= f.input :prep_time, as: :time, default: Time.parse('0:30') %></div></div>
         <div id="alt_placeholder"></div>
         <div id="alternative_alt_list"></div>
         <%= f.input :pic %>
