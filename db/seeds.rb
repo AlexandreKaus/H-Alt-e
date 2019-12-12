@@ -7,6 +7,13 @@ User.destroy_all
 puts 'Creating 5 fake user...'
 puts 'Creating 10 Alternatives'
 
+billy = User.new(
+    username: "By Billy Frampton",
+    email: "b-frampton@gmail.com",
+    password: 'password',
+  )
+  billy.save!
+
 user1 = User.new(
     username: Faker::Internet.username,
     email: Faker::Internet.email,
@@ -52,7 +59,7 @@ ben = User.new(
 
 beewaxwrap = Alternative.new(
     title: "Beeswax Food Wraps for a Plastic-Free Kitchen",
-    description: "If you pack your own lunch every day (maybe your kids' too), it might feel like you're always adding cling wrap to your grocery list and throwing used plastic baggies in the trash. Disposable packaging definitely offers convenience, but it's not the most environmentally friendly option. Enter beeswax wraps: The pliable covers fold up around foods and cover bowls of leftovers",
+    description: "Both my husband and I love to cook, and we delight in sharing our gastronomic adventures with those we love. However, I’ve always hated using plastic wrap each time we take one of our culinary creations out the door. So I set out to find a plastic wrap alternative.",
     ingredients: ["Cosmetic-grade beeswax pellets", "100% cotton fabric", "Scissors or pinking shears","Brush","Parchment paper","Baking sheet"],
     difficulty: "Moderate",
     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
@@ -125,31 +132,31 @@ lips = Alternative.new(
     lips.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576095940/index_jrxlhl.jpg"
     lips.save!
 
-# pierre_da = Alternative.new(
-#     title: "Natural Deodorant",
-#     description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
-#     ingredients: ["", "", "",""],
-#     difficulty: "Challenging",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["Bio", "Zero Waste"],
-#     alt_at: ["Deodorant"],
-#     user: user3,
-#     )
-#     pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099017/deodorant_yairkv.jpg"
-#     pierre_da.save!
+pierre_da = Alternative.new(
+    title: "Natural Deodorant",
+    description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
+    ingredients: ["", "", "",""],
+    difficulty: "Challenging",
+    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    alimentation_list: ["Bio", "Zero Waste"],
+    alt_at: ["Deodorant"],
+    user: user3,
+    )
+    pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099017/deodorant_yairkv.jpg"
+    pierre_da.save!
 
-# prod4 = Alternative.new(
-#     title: "Mason Jar",
-#     description: "Repurpose your mason jars with one of these 50 DIY projects. From practical uses to beautiful home decor ideas, you're sure to find at least one project that you'll love.",
-#     ingredients: ["", "", "",""],
-#     difficulty: "Very easy",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user1,
-#     )
-#     prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099655/Extraordinary-Adorable-DIY-Mason-Jar-Crafts-to-Pursue_psxion.jpg"
-#     prod4.save!
+prod4 = Alternative.new(
+    title: "Mason Jar",
+    description: "Repurpose your mason jars with one of these 50 DIY projects. From practical uses to beautiful home decor ideas, you're sure to find at least one project that you'll love.",
+    ingredients: ["", "", "",""],
+    difficulty: "Very easy",
+    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    alimentation_list: ["", ""],
+    alt_at: [""],
+    user: user1,
+    )
+    prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099655/Extraordinary-Adorable-DIY-Mason-Jar-Crafts-to-Pursue_psxion.jpg"
+    prod4.save!
 
 # prod5 = Alternative.new(
 #     title: "zero waste toothpaste",
