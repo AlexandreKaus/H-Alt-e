@@ -16,8 +16,7 @@
        <div id="ingredients_placeholder"></div>
         <div id="alternative_ingredients_list"></div>
 
-        <%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %>
-        <%= f.input :prep_time, as: :time, default: Time.parse('0:30') %>
+
 
         <div class="ligndiv d-flex">
         <div class="diffdiv"><%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %></div>
