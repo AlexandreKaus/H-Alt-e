@@ -36,7 +36,7 @@ user3 = User.new(
   user3.save!
 
 alex = User.new(
-    username: 'AlexandreK',
+    username: 'Coline.R',
     email: 'kaus.alexandre@gmail.com',
     password: 'password',
   )
@@ -168,7 +168,7 @@ prod7 = Alternative.new(
     prep_time: DateTime.new(2012, 8, 29, 0, 20, 0),
     alimentation_list: ["Plastic-Free", "Zero Waste"],
     alt_at: ["Detergent"],
-    user: alex,
+    user: user1,
     )
     prod7.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161582/Prod_7_ya8cvv.jpg"
     prod7.save!
