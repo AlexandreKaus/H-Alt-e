@@ -36,7 +36,7 @@ user3 = User.new(
   user3.save!
 
 alex = User.new(
-    username: 'AlexandreK',
+    username: 'Coline.R',
     email: 'kaus.alexandre@gmail.com',
     password: 'password',
   )
@@ -58,11 +58,11 @@ ben = User.new(
   ben.save!
 
 beewaxwrap = Alternative.new(
-    title: "Beeswax Food Wraps for a Plastic-Free Kitchen",
+    title: "Beeswax Food Wraps",
     description: "Both my husband and I love to cook, and we delight in sharing our gastronomic adventures with those we love. However, I’ve always hated using plastic wrap each time we take one of our culinary creations out the door. So I set out to find a plastic wrap alternative.",
     ingredients: ["Cosmetic-grade beeswax pellets", "100% cotton fabric", "Scissors or pinking shears","Brush","Parchment paper","Baking sheet"],
     difficulty: "Moderate",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    prep_time: DateTime.new(2012, 8, 29, 0, 15, 0),
     alimentation_list: ["Zero Waste", "Plastic-Free"],
     alt_at: ["Food plastic wrap","Aluminium foil"],
     user: billy,
@@ -137,7 +137,7 @@ pierre_da = Alternative.new(
     description: "A simple DIY Natural Deodorant recipe that smells amazing and works too! Made with clean, all-natural ingredients and ready in under 10 minutes, this natural deodorant recipe will quickly become a staple in your body routine.",
     ingredients: ["", "", "",""],
     difficulty: "Challenging",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    prep_time: DateTime.new(2012, 8, 29, 0, 35, 0),
     alimentation_list: ["Bio", "Zero Waste"],
     alt_at: ["Deodorant"],
     user: user3,
@@ -150,7 +150,7 @@ prod4 = Alternative.new(
     description: "Repurpose your mason jars with one of these 50 DIY projects. From practical uses to beautiful home decor ideas, you're sure to find at least one project that you'll love.",
     ingredients: ["", "", "",""],
     difficulty: "Very easy",
-    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    prep_time: DateTime.new(2012, 8, 29, 0, 10, 0),
     alimentation_list: ["", ""],
     alt_at: [""],
     user: user1,
@@ -158,85 +158,71 @@ prod4 = Alternative.new(
     prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1586864363/H-Alt-e/DIY/jars_iz570k.png"
     prod4.save!
 
-# prod5 = Alternative.new(
-#     title: "zero waste toothpaste",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["Vegan", "Zero Waste", "Plastic-Free"],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod5.remote_pic_url = ""
-#     prod5.save!
 
-# prod6 = Alternative.new(
-#     title: "",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod6.remote_pic_url = ""
-#     prod6.save!
+prod6 = Alternative.new(
+    title: "Tawashi sponge",
+    description: "Tawashi sponges are a 100% recycled and free alternative, and they're perfect if you have a few old spare socks on hand",
+    ingredients: ["", "", "",""],
+    difficulty: "Moderate",
+    prep_time: DateTime.new(2012, 8, 29, 0, 10, 0),
+    alimentation_list: ["Plastic-Free", "Zero Waste"],
+    alt_at: ["Classic sponge"],
+    user: user2,
+    )
+    prod6.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161582/Prod_6_rz4b5v.jpg"
+    prod6.save!
 
-# prod7 = Alternative.new(
-#     title: "",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod7.remote_pic_url = ""
-#     prod7.save!
+prod7 = Alternative.new(
+    title: "Homemade Laundry Detergent",
+    description: "Making your own natural, homemade laundry detergent is one of the easiest parts of a transition to natural living. This natural laundry soap recipe a great way to save money on laundry detergent and is incredibly easy to make.",
+    ingredients: ["", "", "",""],
+    difficulty: "Easy",
+    prep_time: DateTime.new(2012, 8, 29, 0, 20, 0),
+    alimentation_list: ["Plastic-Free", "Zero Waste"],
+    alt_at: ["Detergent"],
+    user: user1,
+    )
+    prod7.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161582/Prod_7_ya8cvv.jpg"
+    prod7.save!
 
-# prod8 = Alternative.new(
-#     title: "",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod8.remote_pic_url = ""
-#     prod8.save!
+prod8 = Alternative.new(
+    title: "Homemade Toothpaste",
+    description: "There are some natural substitutes for the above ingredients which can be used for making home-based toothpastes. These natural constituents not only deliver oral health benefits at par with conventional toothpaste but also have no side effects. They include coconut oil, baking soda and sea salt",
+    ingredients: ["", "", "",""],
+    difficulty: "Moderate",
+    prep_time: DateTime.new(2012, 8, 29, 0, 30, 0),
+    alimentation_list: ["Bio", "Zero Waste"],
+    alt_at: ["Classic Toothpaste"],
+    user: user3,
+    )
+    prod8.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161582/Prod8_iyeahk.jpg"
+    prod8.save!
 
-# prod9 = Alternative.new(
-#     title: "",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod9.remote_pic_url = ""
-#     prod9.save!
+prod9 = Alternative.new(
+    title: "Eco-friendly sanitary pads",
+    description: "Follow our step-by-step guide to make your own eco-friendly, reusable sanitary pads - the same method used by women and girls in Nepal to manage their periods.",
+    ingredients: ["", "", "",""],
+    difficulty: "Moderate",
+    prep_time: DateTime.new(2012, 8, 29, 0, 25, 0),
+    alimentation_list: ["Bio", "Plastic-Free","Zero Waste"],
+    alt_at: ["Sanitary pads"],
+    user: ben,
+    )
+    prod9.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161582/Prod_9_fwjlrh.jpg"
+    prod9.save!
 
-
-# prod10 = Alternative.new(
-#     title: "",
-#     description: "",
-#     ingredients: ["", "", "",""],
-#     difficulty: "",
-#     prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
-#     alimentation_list: ["", ""],
-#     alt_at: [""],
-#     user: user3,
-#     )
-#     prod10.remote_pic_url = ""
-#     prod10.save!
-
+prod10 = Alternative.new(
+    title: "Natural shampoo",
+    description: "Consider this instructable your ultimate guide to making homemade shampoo! Here are one easy shampoo recipe you can use to find the perfect formula for your hair. The benefits are that you can use all natural ingredients, avoid all of the fillers and irritants commercial makers use, scent it any way you want, and customize it to suit your hairs needs.",
+    ingredients: ["", "", "",""],
+    difficulty: "Moderate",
+    prep_time: DateTime.new(2012, 8, 29, 0, 35, 0),
+    alimentation_list: ["Bio", "Vegan","Zero Waste"],
+    alt_at: ["Classic shampoo"],
+    user: romain,
+    )
+    prod10.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576161581/Prod10_mbiyhv.jpg"
+    prod10.save!
 
 puts 'Finished!'
 

@@ -4,11 +4,10 @@
   <div class="dash-white-line"></div>
   <div class="box-mydiy">
     <% @alternatives_select.each do |alternative_select| %>
-    <div class="mydiy-card d-flex">
-        <img src="" alt="">
-         <%= alternative_select.pic %>
-
-
+    <div class="mydiy-card d-flex"
+        //<img src="" alt="">
+        // <%= alternative_select.pic %>
+      <div class="maindash-img"><%= cl_image_tag alternative_select.pic%></div>
       <div class="mydiy-opt">
         <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> <br> <u> <%= alternative_select.created_at.strftime('%B %e, %Y') %></u></p>
         <div class="rest-diy ">
@@ -51,7 +50,7 @@
     </div>
     <div class="vert-white-line"></div>
     <div class="fav-div">
-      <div id="dash-hds">My favorites D.I.Y.s</div>
+      <div id="dash-hds">My favorites D.I.Y.'s</div>
       <div class="box-myfav">
         <!-- div class="dashoptions"> -->
         <% @upvotes_select.each do |upvote_select| %>

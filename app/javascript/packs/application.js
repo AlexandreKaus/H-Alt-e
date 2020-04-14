@@ -17,9 +17,9 @@ var p = document.getElementById("ingredients_placeholder");
 var text = document.getElementById("alternative_ingredients");
 var my_list = document.getElementById("alternative_ingredients_list");
 const clearIngredients = () => {
-  text.value =  '';
+  text.value = "";
 }
-window.onload = clearIngredients
+window.onload = clearIngredients()
  text.addEventListener ('keypress', (event) => {
   if (event.keyCode === 13) {
   p.innerHTML +=  "<div class='my_tag tag_ingredient'>" + text.value + "</div>";
