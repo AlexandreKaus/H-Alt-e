@@ -3,6 +3,7 @@
   background-color: $dark-green;
   // padding:0;
   margin: auto;
+  padding-top: 3px;
   // border: 2px solid white;
 }
 
@@ -91,12 +92,13 @@ margin-right: auto;
   height: 30px;
   border: none;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 
 .crtbtn {
   margin-top: 10px;
-  justify-content: center
+  // width: 20%;
 }
 // .btts {
 //   justify-content: align-center;
