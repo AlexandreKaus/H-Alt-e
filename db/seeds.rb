@@ -67,7 +67,7 @@ beewaxwrap = Alternative.new(
     alt_at: ["Food plastic wrap","Aluminium foil"],
     user: billy,
     )
-    beewaxwrap.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/index_pic_vdfx93.jpg"
+    beewaxwrap.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392520/H-Alt-e/DIY/diy-main-beeswax-01.jpg"
     beewaxwrap.save!
 
   step1 = Photo.new(
@@ -75,7 +75,7 @@ beewaxwrap = Alternative.new(
     detail: 'Preheat the oven to 200°F or the lowest setting. Cut the fabric into sizes that will fit on your baking sheet. For a snack bag, use a 7" by 14" piece of fabric. A 14" by 14" square will cover most sandwiches. Pinking shears will help prevent your swatches from fraying, but scissors will also get the job done.',
     alternative: beewaxwrap,
     )
-    step1.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/Step1_etgoq5.jpg"
+    step1.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392499/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-4_rpiq84.jpg"
     step1.save!
 
   step2 = Photo.new(
@@ -83,7 +83,7 @@ beewaxwrap = Alternative.new(
     detail: "Line a baking sheet with parchment paper and place the fabric on top. If your fabric is one-sided, place the patterned side facedown. Use a fresh piece of parchment paper each time you make another wrap" ,
     alternative: beewaxwrap,
     )
-    step2.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/Step2_whivae.jpg"
+    step2.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392499/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-2_vmhllq.jpg"
     step2.save!
 
   step3 = Photo.new(
@@ -91,7 +91,7 @@ beewaxwrap = Alternative.new(
     detail: "Evenly distribute a liberal amount of beeswax pellets all over the fabric. Make sure you get pellets near the edges too." ,
     alternative: beewaxwrap,
     )
-    step3.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/Step3_kl6ucw.jpg"
+    step3.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392500/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-5_xxpmvw.jpg"
     step3.save!
 
   step4 = Photo.new(
@@ -99,7 +99,7 @@ beewaxwrap = Alternative.new(
     detail: "Place the sheet in the oven for about 4-8 minutes. When the pellets melt completely, take the tray out and use a paintbrush to spread the wax evenly over the entire fabric." ,
     alternative: beewaxwrap,
     )
-    step4.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/Step4_sehpie.jpg"
+    step4.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392499/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-4_rpiq84.jpg"
     step4.save!
 
   step5 = Photo.new(
@@ -107,7 +107,7 @@ beewaxwrap = Alternative.new(
     detail: "Using tongs, remove the fabric from the baking sheet. It should feel cool to the touch after waving it for a few seconds in the air. Hang the fabric up to dry or set it on the back of a chair with the beeswax side facing up." ,
     alternative: beewaxwrap,
     )
-    step5.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094422/Step5_urb1qj.jpg"
+    step5.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392499/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-1-1_ndohwi.jpg"
     step5.save!
 
 
@@ -116,9 +116,21 @@ beewaxwrap = Alternative.new(
     detail: "Once the beeswax has set and is not very tacky, you can add buttons or hand-sew them into small pouches." ,
     alternative: beewaxwrap,
     )
-    step6.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576094423/Step6_erdjv3.jpg"
+    step6.remote_photo_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1575392499/H-Alt-e/DIY/Reusable-Beeswax-Food-Wrap-3_yhgdyl.jpg"
     step6.save!
 
+lips = Alternative.new(
+    title: "Homemade Lip Balm",
+    description: "This homemade lip balm is SO EASY to make. It only takes 5 minutes and just three simple ingredients. It solidifies almost instantly, so you don’t even have to wait for it! It smells amazing and has a wonderful silky smooth texture to it. It’s perfect for those of us with sensitive skin!",
+    ingredients: ["1 Tablespoon Yellow Beeswax Pellets", "1 Tablespoon Coconut Oil", "For Peppermint: 3 drops 100% Pure Peppermint Essential Oil","For Lemon: 5 drops 100% Pure Lemon Essential Oil"],
+    difficulty: "Easy",
+    prep_time: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :midnight),
+    alimentation_list: ["Zero Waste", "Plastic-Free"],
+    alt_at: ["Labello"],
+    user: romain,
+    )
+    lips.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1586864289/H-Alt-e/DIY/diy_lipbalm_embdn1.jpg"
+    lips.save!
 
 pierre_da = Alternative.new(
     title: "Natural Deodorant",
@@ -130,7 +142,7 @@ pierre_da = Alternative.new(
     alt_at: ["Deodorant"],
     user: user3,
     )
-    pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099017/deodorant_yairkv.jpg"
+    pierre_da.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1586864287/H-Alt-e/DIY/pierre_d_alun_fdccmw.jpg"
     pierre_da.save!
 
 prod4 = Alternative.new(
@@ -143,7 +155,7 @@ prod4 = Alternative.new(
     alt_at: [""],
     user: user1,
     )
-    prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1576099655/Extraordinary-Adorable-DIY-Mason-Jar-Crafts-to-Pursue_psxion.jpg"
+    prod4.remote_pic_url = "https://res.cloudinary.com/dgpkng6h9/image/upload/v1586864363/H-Alt-e/DIY/jars_iz570k.png"
     prod4.save!
 
 
