@@ -147,7 +147,7 @@
 
 .supplies {
   margin-top:12px;
-  line-height: 14px;
+  line-height: 18px;
 }
 
 .supplies h4 {
@@ -165,6 +165,7 @@
 .ingredients .time {
   // margin-top: -8px;
   margin-left: 10px;
+  font-family: "Noto Sans", "Helvetica", "Sans Serif" !important;
 }
 
 h4 {
@@ -226,10 +227,14 @@ background-color: $dark-green;
 color: $white;
 border: solid 1px $white;
 margin-bottom: 0px;
+justify-content: center;
+align-items: center;
+text-align: center;
+
 }
 
 .tag-container > .my_tag:hover {
-  height:30px;
+height:30px;
 padding-right: 10px;
 padding-left: 10px;
 background-color: $dark-green;

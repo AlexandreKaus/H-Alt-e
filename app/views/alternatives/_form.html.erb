@@ -23,11 +23,11 @@
         <div id="alternative_alt_list"></div>
         <div class="ligndiv d-flex">
         <div class="diffdiv"><%= f.input :difficulty, default: 'Very easy', collection: ["Very easy","Easy","Moderate","Challenging","Hard"] %></div>
-        <div class="timediv"><%= f.input :prep_time, as: :time, default: Time.parse('0:30') %></div></div>
+        <div class="timediv"><%= f.input :prep_time, as: :time, default: Time.parse('0:00') %></div></div>
         <%= f.input :pic, label: 'Picture' %>
         <%= f.input :pic_cache, as: :hidden %>
         <%= f.input :alimentation_list, label: "Lifestyle", collection: $list_of_tags, as: :check_boxes %>
-        <%= f.button :submit, class: 'btn btn-primary2' %>
+        <%= f.button :submit, "Submit alternative" , class: 'btn btn-primary2' %>
       <% end %>
       </div>
     </div>

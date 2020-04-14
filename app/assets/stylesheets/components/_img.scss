@@ -48,9 +48,9 @@
   width: 170px;
   height: 110px;
   flex-shrink: 0;
-  -webkit-filter: url(#monochrome);
-  filter:  url(#monochrome);
-  border: 1px solid $dark-green;
+  -webkit-filter: url(#monochrome)!important;
+  filter:  url(#monochrome)!important;
+  border: 1px solid $dark-green!important;
   // box-sizing: border-box;
   object-fit: cover;
 

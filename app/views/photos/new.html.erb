@@ -15,32 +15,31 @@
     </div>
     <% end %>
     <div class="formgrid">
-
+      <h2>Add another step</h2>
       <%= simple_form_for [@alternative, @photo] do |f| %>
       <%= f.input :name %>
       <%= f.input :detail %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
-      <div class="crtbtn d-flex">
-      <%= f.submit "Create", class: 'btn btn-primary' %>
+      <div class="crtbtn">
+      <%= f.submit "Add step", class: 'btn btn-primary' %>
       <%= f.submit "Done", class: 'btn btn-primary' %>
       <% end %>
     </div>
     <% else %>
   </div>
-
-  <div class="row justify-content-center" style="margin-bottom: 150px; margin-top: 150px">
-    <div class="col-12 col-sm-8 col-md-6">
-      <div class="form-container">
+  <div class="row justify-content-left" style="margin-bottom: 150px; margin-top: 150px">
+    <div class="col-4 col-sm-8 col-md-6">
+      <div class="formgrid first-step">
         <div class="form">
+          <h2>Add your first step</h2>
           <%= simple_form_for [@alternative, @photo] do |f| %>
           <%= f.input :name %>
           <%= f.input :detail %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
-          <div class="btts d-flex">
-          <%= f.submit "Create", class: 'btn btn-primary' %>
-
+          <div class="crtbtn ">
+          <%= f.submit "Add step", class: 'btn btn-primary' %>
           </div>
           <% end %>
         </div>

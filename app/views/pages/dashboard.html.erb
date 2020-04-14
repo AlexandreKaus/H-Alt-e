@@ -9,16 +9,17 @@
         // <%= alternative_select.pic %>
       <div class="maindash-img"><%= cl_image_tag alternative_select.pic%></div>
       <div class="mydiy-opt">
-        <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> <br> <u> <%= alternative_select.created_at.strftime('%B %e, %Y') %></u></p>
+        <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p><br>
+        <div class="dash-time"> <%= alternative_select.created_at.strftime('%B %e, %Y') %></div>
         <div class="rest-diy ">
           <div class="delete">
             <%= link_to alternative_path(alternative_select), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="fa fa-trash-alt destroy_seed"> Delete </i>
+            <i class="fa fa-trash-alt destroy_seed"></i> Delete
             <% end %>
           </div>
           <div class="edit">
             <%= link_to edit_alternative_path(alternative_select) do %>
-            <i class="fa fa-edit edit_seed"> Edit</i>
+            <i class="fa fa-edit edit_seed"></i> Edit
             <% end %>
           </div>
         </div>
