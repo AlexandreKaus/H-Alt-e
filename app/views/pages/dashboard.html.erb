@@ -5,8 +5,8 @@
   <div class="box-mydiy">
     <% @alternatives_select.each do |alternative_select| %>
     <div class="mydiy-card d-flex"
-        //<img src="" alt="">
-        // <%= alternative_select.pic %>
+        <img src="" alt="">
+        <%= alternative_select.pic %>
       <div class="maindash-img"><%= cl_image_tag alternative_select.pic%></div>
       <div class="mydiy-opt">
         <p id="title-my"> <%= link_to alternative_select.title, alternative_path(alternative_select) %> </p><br>
