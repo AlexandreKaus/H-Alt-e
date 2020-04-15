@@ -10,7 +10,7 @@
       <div class="form">
         <%= simple_form_for alternative do |f| %>
         <%= f.input :title %>
-        <%= f.input :description %>
+        <%= f.input :description, :maxlength => 200, :size => 40 %>
         <%= f.input :ingredients, label: 'Supplies (add by typing enter)'%>
 
        <div id="ingredients_placeholder"></div>

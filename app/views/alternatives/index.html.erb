@@ -27,8 +27,9 @@
     <div class="card-alternatives-left">
       <h2> <%= link_to alternative.title, alternative_path(alternative) %> </h2>
 
-      <p> <%= alternative.description[0...200] %>… </p>
-    </div>
+      <p> <%= alternative.description %></p>
+<!--       <p> <%= alternative.description[0...193] %>… </p>
+ -->    </div>
     <div class="separator"></div>
     <div class="card-alternatives-right">
       <div class="property">  <h4> By <%= alternative.user.username %> </h4>D.I.Y.&nbsp;&nbsp;
@@ -59,7 +60,7 @@
           <% end %>
 
             </div>
-      <div class="d-flex">
+      <div class="tag-box">
         <% alternative.alimentation_list.each do |alim| %>
         <div class="tag"><i class="fas fa-tags"><span class="tagged"> <%= alim %>&nbsp;</span></i></div>
 

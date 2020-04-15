@@ -2,6 +2,11 @@
   font-family: $body-font;
   font-size:14px;
 }
+
 .tag >i{
   font-size:12px;
+}
+.tag{
+  display:flex;
+flex-wrap: nowrap;
 }
