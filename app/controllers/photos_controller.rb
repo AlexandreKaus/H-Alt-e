@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
     @photo.alternative = @alternative
     if params[:commit] == "Add step" && @photo.save
       redirect_to new_alternative_photo_path(@alternative)
-    elsif
+    elsif @photo.save
       redirect_to alternative_path(@alternative.id)
     else
       render :new
